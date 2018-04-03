@@ -6,30 +6,27 @@
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
+    "lodash": "^4.17.5",
     "react": "^16.3.0",
     "react-dom": "^16.3.0",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0",
+    "webpack": "^3.4.1"
   },
-  "description": "FullStack Project: Seated, an OpenTable clone.",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "webpack.config.js",
   "directories": {
+    "lib": "lib",
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack --watch"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/briemcnally/nothing_bundt_seats.git"
-  },
-  "keywords": [],
-  "author": "Brienne McNally",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/briemcnally/nothing_bundt_seats/issues"
-  },
-  "homepage": "https://github.com/briemcnally/nothing_bundt_seats#readme"
+  "author": "",
+  "license": "ISC"
 }

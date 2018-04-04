@@ -9,12 +9,12 @@ const personalGreeting = (currentUser, logout) => (
 );
 
 const sessionLinks = () => (
-  <div>
+  <nav>
     <Link to="/login">Login</Link>
     <br/>
     <br/>
-    <Link to="/signup">Sign Up</Link>
-  </div>
+    <Link to="/signup">Sign Up!</Link>
+  </nav>
 );
 
 const Greeting = ({ currentUser, logout }) => (

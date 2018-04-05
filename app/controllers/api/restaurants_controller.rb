@@ -10,11 +10,14 @@ class Api::RestaurantsController < ApplicationController
     end
   end
 
-  def index
+  def show
+    @restaurant = Bench.find(params[:id])
   end
 
-  def show
+  def index
+    @restaurants = Restaurant.all
   end
+
 
   private
 

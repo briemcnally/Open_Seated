@@ -1,5 +1,5 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 
 class SignupForm extends React.Component {
 
@@ -20,6 +20,7 @@ class SignupForm extends React.Component {
     const user = Object.assign({}, this.state);
     this.props.processForm(user);
   }
+
 
   renderErrors(){
     return(
@@ -86,7 +87,7 @@ class SignupForm extends React.Component {
                 placeholder="Email *"
               />
             </label>
-            
+
             <div className="session-button">
               <input type="submit" value={this.props.formType} />
             </div>

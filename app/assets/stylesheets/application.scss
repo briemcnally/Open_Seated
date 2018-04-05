@@ -19,8 +19,8 @@ body {
 }
 
 main .main-container {
-   min-height: 1300px;
-   width: 1300px;
+   min-height: 1600px;
+   width: 1600px;
    background: white;
    padding: 0px 20px;
    border-radius: 5px;
@@ -72,7 +72,7 @@ header {
 
 .middle-nav {
   text-align: left;
-  width: 300px;
+  width: 400px;
   height: 55px;
   font-size: 18px;
   font-weight: 400;
@@ -82,7 +82,7 @@ header {
 
 .right-nav {
   text-align: right;
-  width: 700px;
+  width: 900px;
   height: 55px;
   font-size: 18px;
   font-weight: 400;
@@ -102,6 +102,6 @@ header {
   margin-right: 15px;
   margin-top: 10px;
   margin-bottom: 5px;
-  padding-left: 500px;
+  padding-left: 600px;
   border-left: 1px solid solid #D3D3D3;
 }

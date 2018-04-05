@@ -8,6 +8,7 @@ class LoginForm extends React.Component {
     super(props);
     this.state = this.props.usercred;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleDemo = this.handleDemo.bind(this);
   }
 
   update(field) {
@@ -32,6 +33,13 @@ class LoginForm extends React.Component {
         ))}
       </ul>
     );
+  }
+
+  handleDemo(event){
+    event.preventDefault();
+    this.state = {username: "GuestDemo", password: "guestdemo"};
+    const guest = Object.assign({}, this.state);
+    this.props.processForm(guest);
   }
 
   render() {
@@ -62,10 +70,15 @@ class LoginForm extends React.Component {
               <div className="session-button">
                 <input type="submit" value={this.props.formType} />
               </div>
-                <h2 className="redirect-new-user">
-                  New to OpenSeated?
-                  <Link to="/signup"> Create an account </Link>
-                </h2>
+              <h2 className="redirect-new-user">
+                New to OpenSeated?
+                <Link to="/signup"> Create an account </Link>
+              </h2>
+
+              <h2 className="redirect-new-user">
+                Want to test out our site?
+                <button onClick={this.handleDemo}> Demo Login </button>
+              </h2>
             </fieldset>
           </form>
         </div>

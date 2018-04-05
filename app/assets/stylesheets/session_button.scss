@@ -5,6 +5,13 @@
   margin-top: 15px;
 }
 
+.session-button:hover {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
 .sign-up {
   display: inline-block;
   align-items: center;
@@ -70,4 +77,12 @@
 }
 .redirect-new-user a {
   color: #da3743;
+}
+
+.redirect-new-user button {
+  color: #da3743;
+}
+
+.redirect-new-user button:hover {
+  cursor:pointer;
 }

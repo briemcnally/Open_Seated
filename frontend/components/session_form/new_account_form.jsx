@@ -1,7 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-class SessionForm extends React.Component {
+class SignupForm extends React.Component {
 
   constructor(props) {
     super(props);
@@ -34,44 +34,13 @@ class SessionForm extends React.Component {
   }
 
   render() {
-    if (this.props.formType === 'Sign In'){
-      return (
-        <div className="form1">
-          <form onSubmit={this.handleSubmit} className="session-form">
-            <h3>Please Sign In</h3>
-            {this.renderErrors()}
-            <fieldset className="session-form-inputs">
-              <label>
-                <input className="session-input"
-                  type="text"
-                  value={this.state.username}
-                  onChange={this.update('username')}
-                  className="login-input"
-                  placeholder="Username"
-                />
-              </label>
-              <label>
-                <input className="session-input"
-                  type="password"
-                  value={this.state.password}
-                  onChange={this.update('password')}
-                  className="login-input"
-                  placeholder="Password"
-                />
-              </label>
-              <div className="session-button">
-                <input type="submit" value={this.props.formType} />
-              </div>
-            </fieldset>
-          </form>
-        </div>
-      );
-    } else {
       return (
         <div className="form1">
           <form onSubmit={this.handleSubmit} className="session-form">
             <h3>Welcome to OpenSeated!</h3>
+
             <fieldset className="session-form-inputs">
+
               <label>
                 <input className="session-input"
                   type="text"
@@ -88,15 +57,6 @@ class SessionForm extends React.Component {
                   onChange={this.update('lname')}
                   className="signup-input"
                   placeholder="Last Name *"
-                  />
-              </label>
-              <label>
-                <input className="session-input"
-                  type="text"
-                  value={this.state.email}
-                  onChange={this.update('email')}
-                  className="signup-input"
-                  placeholder="Email *"
                   />
               </label>
             <label>
@@ -117,15 +77,25 @@ class SessionForm extends React.Component {
                 placeholder="Password *"
               />
             </label>
+            <label>
+              <input className="session-input"
+                type="text"
+                value={this.state.email}
+                onChange={this.update('email')}
+                className="signup-input"
+                placeholder="Email *"
+              />
+            </label>
+            
             <div className="session-button">
               <input type="submit" value={this.props.formType} />
             </div>
+
           </fieldset>
-          </form>
-        </div>
-      );
-    }
+        </form>
+      </div>
+    );
   }
 }
 
-export default withRouter(SessionForm);
+export default withRouter(SignupForm);

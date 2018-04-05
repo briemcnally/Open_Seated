@@ -1,0 +1,83 @@
+.form1 {
+  display: block;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.form1 h3 {
+  text-align: left;
+  margin-left: 15px;
+  font-weight: 200;
+  font-size: 30px;
+  margin-top: 0;
+}
+
+.form1 h3:after {
+  content:' ';
+  display:block;
+  border: 0.5px solid #D3D3D3;
+}
+
+.session-form {
+  display: inline-block;
+  font-family: 'Source Sans Pro', sans-serif;
+  justify-content: center;
+  padding: 19px;
+  width: 500px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.form1 label {
+    width: 464px;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    padding: 5px 18px 15px 10px;
+}
+
+.session-form-inputs {
+  display: block;
+  width: 450px;
+  text-align: left;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    text-align: left;
+    // box-sizing: border-box;
+    border: 1px solid #D3D3D3;
+    background-color: white;
+    border-radius: 3px;
+}
+
+input[type=password] {
+    width: 100%;
+    padding: 8px 8px;
+    margin: 8px 0;
+    text-align: left;
+    // box-sizing: border-box;
+    border: 1px solid #D3D3D3;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+input[type=submit] {
+  color: white;
+  background-color: #da3743;
+  padding: 10px 200px;
+  border-radius: 3px;
+  width: 20%;
+  font-size: 24px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}

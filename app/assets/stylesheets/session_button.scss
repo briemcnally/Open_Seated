@@ -1,0 +1,73 @@
+.session-button {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.sign-up {
+  display: inline-block;
+  align-items: center;
+  font-family: 'Muli', sans-serif;
+  background-color: #237b98;
+  border-radius: 5px;
+  border-color: #1c627a;
+  color: #fff;
+  text-align: center;
+  margin-right: 4px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  padding: 4px 18px;
+  height: 50%;
+  text-decoration: none;
+  letter-spacing: 1.25px;
+}
+
+.sign-in {
+  display: inline-block;
+  text-align: center;
+  font-family: 'Muli', sans-serif;
+  margin-right: 30px;
+  margin-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 18px;
+  // font-weight: bold;
+  text-decoration: none;
+  vertical-align: center;
+  height: 50%;
+  letter-spacing: 1.1px;
+}
+
+.greeting-nav button {
+  font-family: 'Muli', sans-serif;
+  letter-spacing: 1.25px;
+  display: inline-block;
+  text-align: center;
+  background-color: #da3743;
+  color: white;
+  border-radius: 3px;
+  margin-right: 5px;
+  margin-top: 7px;
+  font-size: 18px;
+  padding: 4px 18px;
+  text-decoration: none;
+}
+
+.redirect-new-user {
+  font-family: 'Muli', sans-serif;
+  font-size: 18px;
+  padding-top: 10px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+.redirect-new-user:before {
+  content:' ';
+  display:block;
+  border: 0.5px solid #D3D3D3;
+  margin-bottom: 15px;
+}
+.redirect-new-user a {
+  color: #da3743;
+}

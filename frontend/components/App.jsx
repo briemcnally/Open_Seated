@@ -21,6 +21,9 @@ const App = () => (
           <h1 className="">OpenSeated</h1>
         </div>
         </div>
+        <div className="current-city">
+          <h3>San Francisco Bay Area</h3>
+        </div>
         <GreetingContainer />
       </nav>
     </header>

@@ -23,7 +23,8 @@ class Api::RestaurantsController < ApplicationController
 
   def user_params
     params.require(:resaurant).permit(:name, :street_address,
-      :city, :state, :zip_code, :num_seats, :cuisine, :img_url, :phone_number)
+      :city, :state, :zip_code, :num_seats, :cuisine, :img_url,
+      :phone_number, :description)
   end
 
 end

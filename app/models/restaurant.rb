@@ -14,6 +14,7 @@
 #  phone_number   :string           not null
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  description    :string
 #
 
 class Restaurant < ApplicationRecord

@@ -18,14 +18,19 @@ export const logoutCurrentUser = errors => ({
   type: LOGOUT_CURRENT_USER
 });
 
-export const signup = formUser => dispatch => (APIUtil.signup(formUser)
-  .then(user => (dispatch(receiveCurrentUser(user)))
-));
+export const signup = formUser => dispatch => (
+  APIUtil.signup(formUser).then(user => (dispatch(receiveCurrentUser(user))
+  ), err => (dispatch(receiveErrors(err.responseJSON))
+  ))
+);
 
 export const login = formUser => dispatch => (
-  APIUtil.login(formUser).then(user => (dispatch(receiveCurrentUser(user)))
-));
+  APIUtil.login(formUser).then(user => (dispatch(receiveCurrentUser(user))
+  ), err => (dispatch(receiveErrors(err.responseJSON))
+  ))
+);
 
 export const logout = () => dispatch => (
-  APIUtil.logout().then(user => (dispatch(receiveCurrentUser(null)))
-));
+  APIUtil.logout().then(user => (dispatch(receiveCurrentUser(null))
+  ))
+);

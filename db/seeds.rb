@@ -25,7 +25,9 @@ american = Restaurant.create({
   cuisine: 1,
   phone_number: "4157729060",
   img_url: "https://res.cloudinary.com/dzmnmgun1/image/upload/v1522967486/hamburger-food-meal-tasty-47725.jpg",
-  description: "Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting."
+  description: "Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
+  price: 4,
+  neighborhood: "Financial District/Embarcadero"
 })
 
 chinese = Restaurant.create({
@@ -38,7 +40,9 @@ chinese = Restaurant.create({
   cuisine: 2,
   phone_number: "4158632800",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/v1522967620/pexels-photo-955137.jpg",
-  description: "Trendy crowds line up for the imaginative Chinese eats at this casual, nationally known destination."
+  description: "Trendy crowds line up for the imaginative Chinese eats at this casual, nationally known destination.",
+  price: 2,
+  neighborhood: "Mission"
 })
 
 french = Restaurant.create({
@@ -51,7 +55,9 @@ french = Restaurant.create({
   cuisine: 3,
   phone_number: "4159866491",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/v1522967794/pexels-photo-299351.jpg",
-  description:"French bistro with industrial-chic decor & outdoor seating plus a menu specializing in seafood."
+  description:"French bistro with industrial-chic decor & outdoor seating plus a menu specializing in seafood.",
+  price: 3,
+  neighborhood: "Financial District/Embarcadero"
 })
 
 italian = Restaurant.create({
@@ -64,7 +70,9 @@ italian = Restaurant.create({
   cuisine: 4,
   phone_number: "4153989696",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/v1522967981/bivalve-clam-cooking-921374_1.jpg",
-  description: "Family-run institution (since 1935) firing up thin-crust pizzas in its original wood-burning oven."
+  description: "Family-run institution (since 1935) firing up thin-crust pizzas in its original wood-burning oven.",
+  price: 2,
+  neighborhood: "Financial District/Embarcadero"
 })
 
 japanese = Restaurant.create({
@@ -77,7 +85,9 @@ japanese = Restaurant.create({
   cuisine: 5,
   phone_number: "4158650633",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/v1522968358/chopsticks-cooking-cuisine-858508.jpg",
-  description: "Sleek sushi restaurant with imported Japanese fish & several high-end chef's-choice dinner menus."
+  description: "Sleek sushi restaurant with imported Japanese fish & several high-end chef's-choice dinner menus.",
+  price: 4,
+  neighborhood: "North Beach/Telegraph Hill"
 })
 
 mediterranean = Restaurant.create({
@@ -90,7 +100,9 @@ mediterranean = Restaurant.create({
   cuisine: 6,
   phone_number: "4159212956",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/v1522968518/pexels-photo-407293.jpg",
-  description: "Middle Eastern-Mediterranean spot pairing meze platters & prime people-watching via sidewalk seats."
+  description: "Middle Eastern-Mediterranean spot pairing meze platters & prime people-watching via sidewalk seats.",
+  price: 2,
+  neighborhood: "Fillmore"
 })
 
 mexican = Restaurant.create({
@@ -103,7 +115,9 @@ mexican = Restaurant.create({
   cuisine: 7,
   phone_number: "4156831346",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/v1522968733/tacos-1904921_640.jpg",
-  description:"Fans of Mexican sustainable eats grab a seat at the long bar & communal tables in blonde-wood decor."
+  description:"Fans of Mexican sustainable eats grab a seat at the long bar & communal tables in blonde-wood decor.",
+  price: 2,
+  neighborhood: "Mission"
 })
 
 seafood = Restaurant.create({
@@ -116,7 +130,9 @@ seafood = Restaurant.create({
   cuisine: 8,
   phone_number: "4154313900",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/v1522968951/15862329469_78f002d81e_m.jpg",
-  description: "Since 1977, diners have been coming to this nautical-themed eatery for fresh fish & shellfish."
+  description: "Since 1977, diners have been coming to this nautical-themed eatery for fresh fish & shellfish.",
+  price: 3,
+  neighborhood: "Castro"
 })
 
 vietnamese = Restaurant.create({
@@ -129,5 +145,7 @@ vietnamese = Restaurant.create({
   cuisine: 9,
   phone_number: "4155664722",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/v1522969984/Screen_Shot_2018-04-05_at_4.12.22_PM.png",
-  description: "This eatery offers the standard Vietnamese dishes like pho & banh xeo in a no-frills setting."
+  description: "This eatery offers the standard Vietnamese dishes like pho & banh xeo in a no-frills setting.",
+  price: 1,
+  neighborhood: "Inner Sunset"
 })

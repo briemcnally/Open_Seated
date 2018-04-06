@@ -1,5 +1,6 @@
-import { RECEIVE_RESTAURANTS, RECEIVE_RESTAURANT } from '../actions/restaurant_actions';
-import merge from 'lodash/merge';
+import { RECEIVE_RESTAURANTS,
+  RECEIVE_RESTAURANT } from '../actions/restaurant_actions';
+import { merge } from 'lodash';
 
 export default(state = {}, action) => {
   Object.freeze(state);

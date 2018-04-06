@@ -15,12 +15,18 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  description    :string
+#  price          :integer
 #
 
 class Restaurant < ApplicationRecord
+  VALID_PRICE = %w(1 2 3 4)
+  enum cuisine: [:American, :Chinese, :French, :Italian, :Japanese,
+                :Mediterranean, :Mexican, :Seafood, :Vietnamese, :Thai]
+  validates :price, presence: true, inclusion: { in: [1, 2, 3, 4] }
   validates :name, presence: true, uniqueness: true
   validates :street_address, :city, :state, :zip_code,
   :num_seats, :cuisine, :phone_number, presence: true
+  validates :neighborhood, presence: true
 
   has_many :reviews
   has_many :favorites
@@ -46,5 +52,5 @@ class Restaurant < ApplicationRecord
 
   def average_value_rating
     reviews.average(:value)
-  end 
+  end
 end

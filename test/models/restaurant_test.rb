@@ -15,6 +15,7 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  description    :string
+#  price          :integer
 #
 
 require 'test_helper'

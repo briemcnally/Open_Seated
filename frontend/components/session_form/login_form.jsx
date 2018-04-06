@@ -17,6 +17,10 @@ class LoginForm extends React.Component {
     });
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors([]);
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -45,9 +49,9 @@ class LoginForm extends React.Component {
   render() {
       return (
         <div className="form1">
+          {this.renderErrors()}
           <form onSubmit={this.handleSubmit} className="session-form">
             <h3>Please Sign In</h3>
-            {this.renderErrors()}
             <fieldset className="session-form-inputs">
               <label>
                 <input className="session-input"

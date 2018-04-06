@@ -15,6 +15,12 @@ class SignupForm extends React.Component {
     });
   }
 
+  componentWillUnmount(){
+    this.props.clearErrors(this.props.errors);
+    this.props.errors = [];
+  }
+
+
   handleSubmit(e) {
     e.preventDefault();
     const user = Object.assign({}, this.state);
@@ -37,6 +43,7 @@ class SignupForm extends React.Component {
   render() {
       return (
         <div className="form1">
+          {this.renderErrors()}
           <form onSubmit={this.handleSubmit} className="session-form">
             <h3>Welcome to OpenSeated!</h3>
 

@@ -12,7 +12,7 @@ class RestaurantIndex extends React.Component {
 
     return (
       <div>
-        <ul>
+        <ul className="rest-index-list">
           {
             this.props.restaurants.map(restaurant =>
               <RestaurantIndexItem
@@ -22,7 +22,9 @@ class RestaurantIndex extends React.Component {
             )
           }
         </ul>
-        <Link to={`/restaurants/new`}>Add a Restaurant</Link>
+        <div className="form-link">
+          <Link className="create-restaurant" to={`/restaurants/new`}>Add a Restaurant</Link>
+        </div>
       </div>
     );
   }

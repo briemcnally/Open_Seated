@@ -15,6 +15,7 @@ h3, h4, h5, h6 {
   vertical-align: inherit;
   box-sizing: inherit;
   background: transparent;
+  list-style-type: none;
 }
 
 body {

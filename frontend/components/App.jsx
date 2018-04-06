@@ -15,10 +15,10 @@ const App = () => (
   <main className="main-container">
     <GreetingContainer />
     <Switch>
+      <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <Route exact path="/restaurants" component={RestaurantIndexContainer} />
-      <Route exact path="/events/:eventId" component={RestaurantShowContainer} />
       <Route exact path="/" component={MainPage} />
     </Switch>
   </main>

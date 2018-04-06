@@ -82,7 +82,16 @@ class RestaurantForm extends React.Component {
           </label>
 
           <select>
-            <option value=""
+            <option value="American">American</option>
+            <option value="Chinese">Chinese</option>
+            <option value="French">French</option>
+            <option value="Italian">Italian</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Mediterranean">Mediterranean</option>
+            <option value="Mexican">Mexican</option>
+            <option value="Seafood">Seafood</option>
+            <option value="Vietnamese">Vietnamese</option>
+            <option value="Thai">Thai</option>
           </select>
 
           <label>

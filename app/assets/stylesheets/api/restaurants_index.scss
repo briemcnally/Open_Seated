@@ -17,11 +17,23 @@
 
 .rest-index-link{
   font-size: 25px;
+  color: #237B98;
 }
 
 .restaurant-box {
   border-bottom: 1px solid #D3D3D3;
   padding: 20px;
+  display: flex;
+}
+
+.left-row-photo {
+  display: inline-block;
+  float: left;
+}
+
+.right-row-info {
+  width: 100%;
+  padding-left: 15px;
 }
 
 .form-link {
@@ -38,4 +50,8 @@
   width: 200px;
   font-size: 24px;
   text-align: center;
+}
+
+.rest-image {
+  border-radius: 3px;
 }

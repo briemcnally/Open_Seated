@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { createRestaurant } from  '../../actions/restaurant_actions';
-import RestaurantForm from './event_form';
+import RestaurantForm from './restaurant_form';
 
 const mapStateToProps = (state, ownProps) => {
   const restaurant = {
@@ -10,7 +10,7 @@ const mapStateToProps = (state, ownProps) => {
     state: "",
     zip_code: "",
     num_seats: "",
-    cuisine: "",
+    cuisine: [1, 2, 3, 4, 5, 6 , 7, 8],
     phone_number: "",
     img_url: "",
     description: "",

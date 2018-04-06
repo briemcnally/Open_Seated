@@ -11,7 +11,7 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def show
-    @restaurant = Bench.find(params[:id])
+    @restaurant = Restaurant.find(params[:id])
   end
 
   def index

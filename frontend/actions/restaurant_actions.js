@@ -1,4 +1,4 @@
-import * as RestaurantAPIUtil from '../util/restuarant_util';
+import * as RestaurantAPIUtil from '../util/restaurant_util';
 
 export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';

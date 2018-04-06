@@ -49,7 +49,9 @@ class LoginForm extends React.Component {
   render() {
       return (
         <div className="form1">
-          {this.renderErrors()}
+          <div className="errors">
+            {this.renderErrors()}
+          </div>
           <form onSubmit={this.handleSubmit} className="session-form">
             <h3>Please Sign In</h3>
             <fieldset className="session-form-inputs">

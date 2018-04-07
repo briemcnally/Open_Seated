@@ -7,8 +7,10 @@ class CreateReservations < ActiveRecord::Migration[5.1]
       t.datetime :time, null: false
       t.integer :num_guests, null: false
       t.integer :points, null: false
+
+      t.timestamps
     end
-    add_index :reservations, :user_id, unique: true
-    add_index :reservations, :restaurant_id, unique: true
+      add_index :reservations, :user_id, unique: true
+      add_index :reservations, :restaurant_id, unique: true
   end
 end

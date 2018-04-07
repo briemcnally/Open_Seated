@@ -11,7 +11,8 @@ const mapStateToProps = (state, ownProps) => ({
 
 
 const mapDispatchToProps = dispatch => ({
-  requestRestaurant: (restaurantId) => dispatch(requestRestaurant(restaurantId)),
+  requestRestaurant: (restaurantId) =>
+  dispatch(requestRestaurant(restaurantId)),
 });
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RestaurantShow));

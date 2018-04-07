@@ -18,11 +18,12 @@ class RestaurantShow extends React.Component {
 
   render(){
     if (this.props.restaurant === undefined) return "loading...";
-    const { restaurant } = this.props
+    const { restaurant } = this.props;
     return (
       <div className="rest-show">
-        <div className="rest-show-box">
+        <div className="rest-header-box">
           <h1 className="rest-name">{restaurant.name}</h1>
+        </div>
           <p>{restaurant.description}</p>
           <ul className="restaurant-details">
             <li>{restaurant.cuisine}</li>
@@ -35,7 +36,6 @@ class RestaurantShow extends React.Component {
           </ul>
 
         </div>
-      </div>
     );
   }
 }

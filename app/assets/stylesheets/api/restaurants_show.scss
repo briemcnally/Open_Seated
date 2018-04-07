@@ -1,1 +1,22 @@
 
+
+.rest-name h1:after{
+  content:' ';
+  display:block;
+  border: 0.5px solid #D3D3D3;
+}
+
+
+.new-rest-form h3 {
+  text-align: left;
+  font-weight: 200;
+  font-size: 30px;
+  margin-top: 0;
+  padding-bottom: 25px;
+}
+
+.new-rest-form h3:after {
+  content:' ';
+  display:block;
+  border: 0.5px solid #D3D3D3;
+}

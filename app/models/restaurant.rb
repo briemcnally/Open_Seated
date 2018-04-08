@@ -16,6 +16,7 @@
 #  updated_at     :datetime         not null
 #  description    :string
 #  price          :integer
+#  neighborhood   :string
 #
 
 class Restaurant < ApplicationRecord
@@ -28,11 +29,16 @@ class Restaurant < ApplicationRecord
   :num_seats, :cuisine, :phone_number, presence: true
   validates :neighborhood, presence: true
 
-  has_many :reviews
-  has_many :favorites
-  has_many :favorite_users,
-    through: :favorites,
-    source: :user
+  # has_many :reviews
+  # has_many :favorites
+  # has_many :favorite_users,
+  #   through: :favorites,
+  #   source: :user
+
+  has_many :reservations,
+    primary_key: :id,
+    foreign_key: :restaurant_id,
+    class_name: :Reservation
 
   def average_rating
     reviews.average(:rating)

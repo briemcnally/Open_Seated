@@ -13,4 +13,4 @@ class CreateReservations < ActiveRecord::Migration[5.1]
       add_index :reservations, :user_id, unique: true
       add_index :reservations, :restaurant_id, unique: true
   end
-end
+end 

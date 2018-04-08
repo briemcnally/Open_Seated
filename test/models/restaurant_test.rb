@@ -16,6 +16,7 @@
 #  updated_at     :datetime         not null
 #  description    :string
 #  price          :integer
+#  neighborhood   :string
 #
 
 require 'test_helper'

@@ -17,7 +17,7 @@ class RestaurantShow extends React.Component {
 }
 
   render(){
-    if (this.props.restaurant === undefined) return "loading...";
+    if (this.props.restaurant === undefined) return "Loading...";
     const { restaurant } = this.props;
     return (
       <div className="rest-show">

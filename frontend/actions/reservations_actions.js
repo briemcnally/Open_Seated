@@ -1,4 +1,4 @@
-import * as ReservationAPIUtil from '../utils/reservation_util';
+import * as ReservationAPIUtil from '../util/reservation_util';
 
 import { receiveErrors } from './session_actions';
 

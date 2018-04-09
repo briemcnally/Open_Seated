@@ -2,7 +2,7 @@ import {
   RECEIVE_RESERVATION,
   RECEIVE_RESERVATIONS,
   REMOVE_RESERVATION
-} from '../actions/reservation_actions';
+} from '../actions/reservations_actions';
 import { merge } from 'lodash';
 
 export default(state = {}, action) => {

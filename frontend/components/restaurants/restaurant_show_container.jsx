@@ -5,7 +5,7 @@ import RestaurantShow from './restaurant_show';
 import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => ({
-  restaurant: state.restaurants[ownProps.match.params.restaurantId],
+  restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
   state: state
 });
 

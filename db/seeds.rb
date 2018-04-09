@@ -149,3 +149,12 @@ vietnamese = Restaurant.create({
   price: 1,
   neighborhood: "Inner Sunset"
 })
+
+# res1 = Reservation.create({
+#   userId: 1,
+#   restaurantId: 2,
+#   num_guests: 2,
+#   date:,
+#   time:,
+#   points: 100
+# })

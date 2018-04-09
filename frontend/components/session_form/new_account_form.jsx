@@ -15,9 +15,8 @@ class SignupForm extends React.Component {
     });
   }
 
-  componentWillUnmount(){
-    this.props.clearErrors(this.props.errors);
-    this.props.errors = [];
+  componentWillUnmount() {
+    this.props.clearErrors([]);
   }
 
 

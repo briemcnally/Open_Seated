@@ -17,6 +17,8 @@
 body {
   background: #f7f7f7;
   font-family: 'Source Sans Pro', sans-serif;
+  max-width: 1600px;
+  margin: auto;
 }
 
 main .main-container {
@@ -37,7 +39,8 @@ header {
   height: 55px;
   border-bottom: 1px solid #D3D3D3;
   font-family: 'Source Sans Pro', sans-serif;
-  // justify-content: space-around;
+  margin-top: 15px;
+  border-top: 1px solid #D3D3D3;
 }
 
 .left-nav {

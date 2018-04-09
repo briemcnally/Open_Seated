@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ReservationSearchContainer from '../reservations/reservation_search_container';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -20,22 +21,32 @@ class RestaurantShow extends React.Component {
     if (this.props.restaurant === undefined) return "Loading...";
     const { restaurant } = this.props;
     return (
-      <div className="rest-show">
-        <div className="rest-header-box">
-          <h1 className="rest-name">{restaurant.name}</h1>
+      <div>
+        <div>
+          <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/v1523130044/pexels-photo-791810_1.jpg`}></img>
         </div>
-          <p>{restaurant.description}</p>
-          <ul className="restaurant-details">
-            <li>{restaurant.cuisine}</li>
-            <li>{restaurant.price}</li>
-            <li>{restaurant.phone_number}</li>
-            <li>
-              {restaurant.street_address}, {restaurant.city},
-              {restaurant.state}, {restaurant.zip_code}
-            </li>
-          </ul>
-
-        </div>
+        <div className="rest-show">
+          <div className="rest-header-box">
+            <h1 className="rest-name">{restaurant.name}</h1>
+          </div>
+          <div className="res-search-bar">
+            <ReservationSearchContainer restaurant={this.props.restaurant}/>
+          </div>
+            <div className="rest-info-box">
+              <p>{restaurant.description}</p>
+              <ul className="restaurant-details">
+                <li>Cuisine: {restaurant.cuisine}</li>
+                <li>Price: {restaurant.price}</li>
+                <li>Phone Number:{restaurant.phone_number}</li>
+                <li>Address:
+                  {restaurant.street_address}, {restaurant.city},
+                  {restaurant.state}, {restaurant.zip_code}
+                </li>
+                <li>Neighborhood: {restaurant.neighborhood}</li>
+              </ul>
+            </div>
+          </div>
+      </div>
     );
   }
 }

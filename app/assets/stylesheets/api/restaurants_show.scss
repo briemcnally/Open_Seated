@@ -1,22 +1,81 @@
-
-
-.rest-name h1:after{
-  content:' ';
-  display:block;
-  border: 0.5px solid #D3D3D3;
+.rest-show {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+.rest-header-box {
+  font-size: 40px;
+  border-bottom: 1px solid #D3D3D3;
+  padding-bottom: 20px;
 }
 
-
-.new-rest-form h3 {
-  text-align: left;
-  font-weight: 200;
-  font-size: 30px;
-  margin-top: 0;
-  padding-bottom: 25px;
+.res-search-bar {
+  margin: 15px;
+  padding: 15px;
+  border: 1px solid #D3D3D3;
+  box-shadow: 0 2px 8px rgba(153, 154, 153, .4);
 }
 
-.new-rest-form h3:after {
-  content:' ';
-  display:block;
-  border: 0.5px solid #D3D3D3;
+.res-search-bar h1 {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #D3D3D3;
+}
+
+.res-search-bar form label {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.res-search-bar form div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.res-search-bar form div label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  margin-top: 10px;
+  font-size: 16px;
+  width: 100%;
+  margin: 10px;
+}
+
+.res-search-bar form div label select {
+  margin-top: 15px;
+  cursor: pointer;
+  background-color: white;
+  display: block;
+  border: none;
+  border-bottom: 1px solid #d8d9db;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+.res-search-button {
+  background-color: #da3743;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  padding: 15px;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 30px;
+}
+
+.rest-info-box{
+  display: block;
+  justify-content: left;
+  padding: 20px;
+}
+
+.rest-info-box p {
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }

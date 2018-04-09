@@ -1,20 +1,20 @@
-export const fetchReservations = () => (
+export const fetchReservations = (reservation) => (
   $.ajax({
-    url: '/api/reservations',
+    url: `/api/restaurants/${reservation.restaurant.id}/reservations`,
     method: 'GET'
   })
 );
 
-export const fetchReservation = (reservationId) => (
+export const fetchReservation = (reservation) => (
   $.ajax({
-    url: `/api/reservations/${reservationId}`,
+    url: `/api/restaurants/${reservation.restaurantId}/reservations/${reservation.id}`,
     method: 'GET',
   })
 );
 
 export const createReservation = (reservation) => (
   $.ajax({
-    url: '/api/reservations',
+    url: `/api/restaurants/${reservation.restaurantId}/reservations`,
     method: 'POST',
     data: { reservation }
   })

@@ -1,0 +1,47 @@
+.row {
+  width: auto;
+  max-width: none;
+  box-sizing: border-box;
+}
+
+.page-header-content h1{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 40px;
+}
+
+.current-diner {
+  box-sizing: border-box;
+  line-height: 1;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.row1, .row2{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.row2 select{
+  width: 100%;
+  border-radius: 0;
+}
+
+.row2 textarea{
+  width: 100%;
+  border-radius: 0;
+}
+
+.res-confirm-button{
+  background-color: #da3743;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  padding: 15px;
+  margin-left: 20px;
+  margin-top: 30px;
+}

@@ -14,7 +14,7 @@ export const fetchReservation = (reservation) => (
 
 export const createReservation = (reservation) => (
   $.ajax({
-    url: `/api/restaurants/${reservation.restaurantId}/reservations`,
+    url: `/api/restaurants/${reservation.restaurant_id}/reservations`,
     method: 'POST',
     data: { reservation }
   })

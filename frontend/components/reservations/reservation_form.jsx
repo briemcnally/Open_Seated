@@ -3,13 +3,22 @@ import React from 'react';
 class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
+
+    this.state = this.props.location.state;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
 
-
   handleSubmit(e) {
-    e.preventDefault;
+    e.preventDefault();
+
+    const newReservation = { user_id: this.state.currentUser.id,
+                          restaurant_id: this.state.restaurant.id,
+                          date: this.state.reservation.date,
+                          time: this.state.reservation.time,
+                          num_guests: this.state.reservation.num_guests,
+                          points: 100 };
+    this.props.createReservation(newReservation);
   }
 
 
@@ -18,6 +27,21 @@ class ReservationForm extends React.Component {
       <div>
         <div className="page-header-content">
           <h1>Almost Done!</h1>
+        </div>
+        <div className="confirm-res-details">
+          <img className= "rest-image" src={this.state.restaurant.img_url}></img>
+          <div>
+            <h1>{this.state.restaurant.name}</h1>
+            <label>Guests
+              <div>{this.state.reservation.num_guests}</div>
+            </label>
+            <label>Date
+              <div>{this.state.reservation.date}</div>
+            </label>
+            <label>Time
+              <div>{this.state.reservation.time}</div>
+            </label>
+          </div>
         </div>
         <div className="row">
           <div className="current-diner">

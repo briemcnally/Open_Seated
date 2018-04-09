@@ -14,7 +14,7 @@
 #
 
 class Reservation < ApplicationRecord
-  validates :num_guests, :date, :taime, :points, presence: true
+  validates :num_guests, :date, :time, :points, presence: true
 
   belongs_to :restaurant,
     primary_key: :id,

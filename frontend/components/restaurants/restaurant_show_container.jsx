@@ -6,6 +6,7 @@ import {withRouter} from 'react-router-dom';
 
 const mapStateToProps = (state, ownProps) => ({
   restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
+  currentUser: state.session.currentUser,
   state: state
 });
 

@@ -25,6 +25,7 @@ const App = () => (
       <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
       <Route exact path="/restaurants" component={RestaurantIndexContainer} />
       <Route exact path="/reservations" component={ReservationSearchContainer}/>
+      <Route path="/" component={MainPage}/>
     </Switch>
   </main>
 );

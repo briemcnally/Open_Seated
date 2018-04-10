@@ -19,7 +19,7 @@ class Api::RestaurantsController < ApplicationController
   end
 
   def query
-    @restaurants = Restaurant.query(params[:search_term]).order(:name)
+    @restaurants = Restaurant.query(params[:searchTerm]).order(:name)
     render :index
   end
 

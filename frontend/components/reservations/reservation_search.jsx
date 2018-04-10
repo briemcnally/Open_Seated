@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 class ReservationSearch extends React.Component {
   constructor(props){
     super(props);
-    this.state = this.props;
+    this.state = this.props.reservation;
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
@@ -35,6 +35,16 @@ class ReservationSearch extends React.Component {
     };
   }
 
+  converDate(date) {
+    const yyyy = date.getFullYear().toString();
+    const mm = (date.getMonth() + 1).toString();
+    const dd = date.getDate().toString();
+
+    let mmChars = mm.split("");
+    let ddChars = dd.split("");
+    return yyyy + '-' + (mmChars[1] ? mm : "0" + mmChars[0]) + "-" + (ddChars[1] ? dd : "0" + ddChars[0]) ;
+  }
+
 
   render() {
     if (!this.props.restaurant) { return null; }
@@ -44,7 +54,7 @@ class ReservationSearch extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <div>
             <label>Party Size
-              <select value={this.state.reservation.num_guests} onChange={this.handleChange('num_guests')}>
+              <select value={this.state.num_guests} onChange={this.handleChange('num_guests')}>
                 <option key="1" value="1">For 1</option>
                 <option key="2" value="2">For 2</option>
                 <option key="3" value="3">For 3</option>
@@ -70,18 +80,17 @@ class ReservationSearch extends React.Component {
               <label>Date
                 <input
                   type="date"
-                  value={this.state.reservation.date}
+                  value={this.state.date}
                   onChange={this.handleChange('date')}>
                 </input>
               </label>
               <label>Time
-                {console.log(this.state.reservation.date)}
-                <select value={this.state.reservation.time} onChange={this.handleChange('time')}>
+                <select value={this.state.time} onChange={this.handleChange('time')}>
                   {this.getReservationTimes()}
                 </select>
               </label>
           </div>
-          <Link to={{pathname:`/restaurants/${this.props.restaurant.id}/reservation/new`, state: this.props}} className="res-search-button">
+          <Link to={{pathname:`/restaurants/${this.props.restaurant.id}/reservation/new`, reservation: this.state, restaurant: this.props.restaurant}} className="res-search-button">
             Find a table
           </Link>
         </form>

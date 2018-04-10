@@ -19,12 +19,14 @@ const sessionLinks = () => (
 
 const Greeting = ({ currentUser, logout }) => (
   <main className="main-nav">
+    <Link to="/" className="home-link">
     <div className="left-nav">
-      <div className='logo-image-container'>
-        <div className='logo-image'></div>
-      </div>
-      <h2 className="logo-name">OpenSeated</h2>
+        <div className='logo-image-container'>
+          <div className='logo-image'></div>
+        </div>
+        <h2 className="logo-name">OpenSeated</h2>
     </div>
+  </Link>
     <div className="middle-nav">
       <h2 className="current-location">
         San Francisco Bay Area

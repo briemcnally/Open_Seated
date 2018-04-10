@@ -65,7 +65,6 @@ class Restaurant < ApplicationRecord
   end
 
   def self.query(search_term)
-    Restaurant.where('name ILIKE :query OR city ILIKE :query OR cuisine ILIKE :query',
-    query: "%#{search_term}")
+    Restaurant.where('name ILIKE :query OR city ILIKE :query', query: "%#{search_term}").or(Restaurant.where(cuisine: search_term.capitalize))
   end
 end

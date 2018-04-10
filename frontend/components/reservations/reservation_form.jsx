@@ -3,8 +3,7 @@ import React from 'react';
 class ReservationForm extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = this.props.location.state;
+    this.state = this.props.location;
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -12,7 +11,7 @@ class ReservationForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const newReservation = { user_id: this.state.currentUser.id,
+    const newReservation = { user_id: this.props.currentUser.id,
                           restaurant_id: this.state.restaurant.id,
                           date: this.state.reservation.date,
                           time: this.state.reservation.time,
@@ -21,12 +20,19 @@ class ReservationForm extends React.Component {
     this.props.createReservation(newReservation);
   }
 
+  update(field) {
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    };
+  }
+
 
   render() {
+    const header = (<h1>You're Almost Done!</h1>);
     return (
       <div>
         <div className="page-header-content">
-          <h1>Almost Done!</h1>
+          <h1>You're Almost Done!</h1>
         </div>
         <div className="confirm-res-details">
           <img className= "rest-image" src={this.state.restaurant.imgUrl}></img>
@@ -49,10 +55,12 @@ class ReservationForm extends React.Component {
           <div className="current-diner">
             <p>{this.props.currentUser.fname + " " + this.props.currentUser.lname}</p>
           </div>
-          <form onClick={this.handleSubmit}>
+          <form>
             <div className="row1">
               <input type="text" placeholder="Phone Number"></input>
-              <input type="text" placeholder="Email"></input>
+              <input type="text"
+                      value={this.props.currentUser.email}
+                      onChange={this.update('email')}></input>
             </div>
             <div className="row2">
               <select>

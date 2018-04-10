@@ -20,14 +20,17 @@
   justify-content: space-between;
   position: relative;
   margin-top: 0;
+  width: 100%;
 }
 
 .main-page-search select {
-  width:100%;
+  width:150px;
+  font-size: 20px;
 }
 
 .main-page-search input {
-  width:40%;
+  width:375px;
+  font-size: 20px;
 }
 
 .main-page-search label {
@@ -35,5 +38,14 @@
 }
 
 .main-page-submit-button {
-
+  padding: 10px 30px;
+  color: white;
+  background-color: #da3743;
+  border-radius: 3px;
+  width: 20%;
+  font-size: 24px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
 }

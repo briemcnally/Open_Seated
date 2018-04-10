@@ -29,18 +29,20 @@ class ReservationForm extends React.Component {
           <h1>Almost Done!</h1>
         </div>
         <div className="confirm-res-details">
-          <img className= "rest-image" src={this.state.restaurant.img_url}></img>
-          <div>
+          <img className= "rest-image" src={this.state.restaurant.imgUrl}></img>
+          <div className="res-confirm">
             <h1>{this.state.restaurant.name}</h1>
-            <label>Guests
-              <div>{this.state.reservation.num_guests}</div>
-            </label>
-            <label>Date
-              <div>{this.state.reservation.date}</div>
-            </label>
-            <label>Time
-              <div>{this.state.reservation.time}</div>
-            </label>
+            <div className="details">
+              <label>Guests
+                <div>{this.state.reservation.num_guests}</div>
+              </label>
+              <label>Date
+                <div>{this.state.reservation.date}</div>
+              </label>
+              <label>Time
+                <div>{this.state.reservation.time}</div>
+              </label>
+            </div>
           </div>
         </div>
         <div className="row">

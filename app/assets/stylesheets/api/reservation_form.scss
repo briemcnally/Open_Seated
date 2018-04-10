@@ -46,3 +46,33 @@
   margin-top: 30px;
   cursor: pointer;
 }
+
+.res-confirm {
+  padding-left: 20px;
+}
+
+.confirm-res-details {
+  padding: 20px;
+  display: flex;
+}
+
+.res-confirm h1{
+  font-size: 25px;
+}
+
+.res-confirm{
+  width: 100%;
+}
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.details label {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  font-size: 20px;
+}

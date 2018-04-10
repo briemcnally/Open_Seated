@@ -30,3 +30,9 @@ export const createRestaurant = (formRestaurant) => dispatch => (
     restaurant => dispatch(receiveRestaurant(restaurant))
   )
 );
+
+export const searchRestaurants = (searchTerm) => dispatch => (
+  RestaurantAPIUtil.findRestaurants(searchTerm).then(
+    restaurants => dispatch(receiveRestaurants(restaurants))
+  )
+);

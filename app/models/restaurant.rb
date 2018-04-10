@@ -59,4 +59,9 @@ class Restaurant < ApplicationRecord
   def average_value_rating
     reviews.average(:value)
   end
+
+  def self.query(search_term)
+    Restaurant.where('name LIKE ? :query OR cuisine LIKE ? :query OR city LIKE? :query',
+    query: "%#{search_term}")
+  end
 end

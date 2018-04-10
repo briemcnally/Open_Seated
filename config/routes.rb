@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resource :session, only: [:create, :destroy, :show]
     resources :restaurants, only: [:create, :index, :show] do
       resources :reservations, only: [:index, :create, :update, :destroy]
-    end 
+    end
+
+    get 'restaurants/search', to: 'restaurants#query'
   end
 
   root "static_pages#root"

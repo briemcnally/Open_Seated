@@ -18,6 +18,11 @@ class Api::RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+  def search
+    @restaurants = Restaurant.query(params[:search_term])
+    render :index
+  end
+
 
   private
 

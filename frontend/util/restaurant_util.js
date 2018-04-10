@@ -19,3 +19,11 @@ export const createRestaurant = (restaurant) => (
     data: { restaurant }
   })
 );
+
+export const findRestaurants = (searchTerm) => (
+  $.ajac({
+    url: 'api/restaurants/search',
+    method: 'POST',
+    data: { searchTerm: searchTerm }
+  })
+);

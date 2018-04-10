@@ -29,11 +29,7 @@ class Restaurant < ApplicationRecord
   :num_seats, :cuisine, :phone_number, presence: true
   validates :neighborhood, presence: true
   CUISINES = %w(American, Chinese, French, Italian, Japanese, Mediterranean, Mexican, Seafood, Vietnamese, Thai)
-  # has_many :reviews
-  # has_many :favorites
-  # has_many :favorite_users,
-  #   through: :favorites,
-  #   source: :user
+
   has_many :reviews,
     primary_key: :id,
     foreign_key: :restaurant_id,
@@ -71,5 +67,4 @@ class Restaurant < ApplicationRecord
       Restaurant.where('name ILIKE :query OR city ILIKE :query', query: "%#{search_term.capitalize}")
     end
   end
-  # .or(Restaurant.where(cuisine: search_term.capitalize))
 end

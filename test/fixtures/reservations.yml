@@ -11,6 +11,7 @@
 #  points        :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  status        :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -12,11 +12,13 @@
 #  value         :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  rating        :integer          not null
 #
 
 class Review < ApplicationRecord
   validates :author_id, :restaurant_id, :body, :food, :service,
-            :ambience, :value, presence: true
+            :ambience, :value, :rating, presence: true
+  validates :rating, :food, :service, :ambience, :value, inclusion: { in: (1..5) }
 
   belongs_to :restaurant,
     primary_key: :id,

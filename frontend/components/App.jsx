@@ -14,6 +14,7 @@ import ReservationSearchContainer from './reservations/reservation_search_contai
 import ReservationFormContainer from './reservations/reservation_form_container';
 import MainPage from './main_page/main_page';
 import RestaurantSearchContainer from './restaurants/restaurant_search_container';
+import ProfileContainer from './users/profile_container'
 
 const App = () => (
   <main className="main-container">
@@ -21,6 +22,7 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
+      <Route exact path="/reservations/confirmation" component={ProfileContainer} />
       <Route exact path="/restaurants/new" component={CreateRestaurantFormContainer} />
       <Route exact path="/restaurants/search" component={RestaurantSearchContainer} />
       <Route exact path="/restaurants/:restaurantId/reservation/new" component={ReservationFormContainer} />

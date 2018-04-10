@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 
 class ReservationForm extends React.Component {
   constructor(props) {
@@ -17,7 +19,8 @@ class ReservationForm extends React.Component {
                           time: this.state.reservation.time,
                           num_guests: this.state.reservation.num_guests,
                           points: 100 };
-    this.props.createReservation(newReservation);
+    this.props.createReservation(newReservation).then(
+      this.props.history.push(`/reservations/confirmation`));
   }
 
   update(field) {
@@ -74,7 +77,11 @@ class ReservationForm extends React.Component {
               <textarea placeholder="Add a special request (optional)">
               </textarea>
             </div>
+            <Link to={{pathname:`reservations/confirm`,
+              reservation: this.state.reservation, restaurant: this.state.restaurant,
+              currentUser: this.props.currentUser}}>
             <button className="res-confirm-button" onClick={this.handleSubmit}>Complete Reservation</button>
+          </Link>
           </form>
         </div>
       </div>

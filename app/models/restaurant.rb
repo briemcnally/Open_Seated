@@ -34,6 +34,10 @@ class Restaurant < ApplicationRecord
   # has_many :favorite_users,
   #   through: :favorites,
   #   source: :user
+  has_many :reviews,
+    primary_key: :id,
+    foreign_key: :restaurant_id,
+    class_name: :Reservation
 
   has_many :reservations,
     primary_key: :id,
@@ -61,7 +65,7 @@ class Restaurant < ApplicationRecord
   end
 
   def self.query(search_term)
-    Restaurant.where('name LIKE ? :query OR cuisine LIKE ? :query OR city LIKE? :query',
+    Restaurant.where('name ILIKE :query OR city ILIKE :query',
     query: "%#{search_term}")
   end
 end

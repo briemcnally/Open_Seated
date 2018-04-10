@@ -21,7 +21,7 @@ export const createRestaurant = (restaurant) => (
 );
 
 export const findRestaurants = (searchTerm) => (
-  $.ajac({
+  $.ajax({
     url: 'api/restaurants/search',
     method: 'POST',
     data: { searchTerm: searchTerm }

@@ -31,6 +31,11 @@ class User < ApplicationRecord
     foreign_key: :user_id,
     class_name: :Reservation
 
+  has_many :reviews,
+    primary_key: :id,
+    foreign_key: :restaurant_id,
+    class_name: :Reservation
+
   def self.find_by_credentials(username, password)
     user = User.find_by(username: username)
     return user if user && BCrypt::Password.new(user.password_digest).is_password?(password)

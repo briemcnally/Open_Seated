@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180409223634) do
+ActiveRecord::Schema.define(version: 20180410044040) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer "user_id", null: false
+    t.integer "restaurant_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "reservations", force: :cascade do |t|
     t.integer "user_id", null: false
@@ -48,6 +55,20 @@ ActiveRecord::Schema.define(version: 20180409223634) do
     t.index ["name"], name: "index_restaurants_on_name", unique: true
     t.index ["num_seats"], name: "index_restaurants_on_num_seats"
     t.index ["state"], name: "index_restaurants_on_state"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer "author_id", null: false
+    t.integer "restaurant_id", null: false
+    t.string "body", null: false
+    t.integer "food", null: false
+    t.integer "service", null: false
+    t.integer "ambience", null: false
+    t.integer "value", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_reviews_on_author_id"
+    t.index ["restaurant_id"], name: "index_reviews_on_restaurant_id"
   end
 
   create_table "users", force: :cascade do |t|

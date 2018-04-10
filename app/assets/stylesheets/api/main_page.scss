@@ -1,0 +1,39 @@
+.content-block-header {
+  position: relative;
+  box-sizing: border-box;
+  display: block;
+  padding: 15px;
+}
+
+.main-page-res-title {
+  font-size: 70px;
+}
+
+.main-page-form {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.main-page-search {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 0;
+}
+
+.main-page-search select {
+  width:100%;
+}
+
+.main-page-search input {
+  width:40%;
+}
+
+.main-page-search label {
+  width:100%;
+}
+
+.main-page-submit-button {
+
+}

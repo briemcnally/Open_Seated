@@ -3,13 +3,11 @@ import RestaurantIndexItem from './restaurant_index_item';
 import { Link } from 'react-router-dom';
 
 class RestaurantIndex extends React.Component {
-
   componentDidMount(){
     this.props.requestRestaurants();
   }
 
   render() {
-
     return (
       <div>
         <ul className="rest-index-list">

@@ -13,6 +13,7 @@ import CreateRestaurantFormContainer  from './restaurants/create_restaurant_form
 import ReservationSearchContainer from './reservations/reservation_search_container';
 import ReservationFormContainer from './reservations/reservation_form_container';
 import MainPage from './main_page/main_page';
+import RestaurantSearchContainer from './restaurants/restaurant_search_container';
 
 const App = () => (
   <main className="main-container">
@@ -21,6 +22,7 @@ const App = () => (
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
       <Route exact path="/restaurants/new" component={CreateRestaurantFormContainer} />
+      <Route exact path="/restaurants/search" component={RestaurantSearchContainer} />
       <Route exact path="/restaurants/:restaurantId/reservation/new" component={ReservationFormContainer} />
       <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
       <Route exact path="/restaurants" component={RestaurantIndexContainer} />

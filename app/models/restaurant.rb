@@ -28,7 +28,7 @@ class Restaurant < ApplicationRecord
   validates :street_address, :city, :state, :zip_code,
   :num_seats, :cuisine, :phone_number, presence: true
   validates :neighborhood, presence: true
-
+  CUISINES = %w(American, Chinese, French, Italian, Japanese, Mediterranean, Mexican, Seafood, Vietnamese, Thai)
   # has_many :reviews
   # has_many :favorites
   # has_many :favorite_users,
@@ -65,6 +65,11 @@ class Restaurant < ApplicationRecord
   end
 
   def self.query(search_term)
-    Restaurant.where('name ILIKE :query OR city ILIKE :query', query: "%#{search_term}").or(Restaurant.where(cuisine: search_term.capitalize))
+    if CUISINES.include?(search_term.capitalize)
+      Restaurant.where(cuisine: search_term.capitalize)
+    else
+      Restaurant.where('name ILIKE :query OR city ILIKE :query', query: "%#{search_term.capitalize}")
+    end
   end
+  # .or(Restaurant.where(cuisine: search_term.capitalize))
 end

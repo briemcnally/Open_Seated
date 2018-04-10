@@ -6,6 +6,7 @@ Rails.application.routes.draw do
       resources :reservations, only: [:index, :create, :update, :destroy]
     end
     post 'restaurants/search', to: 'restaurants#query'
+    get 'restaurants/search', to: 'restaurants#query'
   end
 
   root "static_pages#root"

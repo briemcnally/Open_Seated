@@ -36,3 +36,9 @@ export const searchRestaurants = (searchTerm) => dispatch => (
     restaurants => dispatch(receiveRestaurants(restaurants))
   )
 );
+
+export const postRestaurants = (Searchrestaurants) => dispatch => (
+  RestaurantAPIUtil.postRestaurants(Searchrestaurants).then(
+    restaurants => dispatch(receiveRestaurants(restaurants))
+  )
+);

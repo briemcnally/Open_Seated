@@ -32,7 +32,13 @@ class RestaurantSearch extends React.Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.searchRestaurants(this.state.searchTerm);
+    if (this.state.searchTerm === "") {
+      this.props.searchRestaurants(this.state.searchTerm).then(
+        this.props.history.push('/restaurants'));
+    } else {
+    this.props.searchRestaurants(this.state.searchTerm).then(
+      this.props.history.push('/restaurants/search'));
+    }
   }
 
   render(){

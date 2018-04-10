@@ -27,3 +27,11 @@ export const findRestaurants = (searchTerm) => (
     data: { searchTerm: searchTerm }
   })
 );
+
+export const postRestaurants = (restaurants) => (
+  $.ajax({
+    url: 'api/restaurants/search',
+    method: 'GET',
+    data: { restaurants: restaurants }
+  })
+);

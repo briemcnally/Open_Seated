@@ -27,7 +27,7 @@ class RestaurantShow extends React.Component {
     return (
       <div>
         <div>
-          <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/v1523130044/pexels-photo-791810_1.jpg`}></img>
+          <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/c_scale,w_1200/v1523130044/pexels-photo-791810_1.jpg`}></img>
         </div>
         <div className="rest-show">
           <div className="rest-header-box">

@@ -25,7 +25,7 @@ american = Restaurant.create({
   cuisine: 0,
   phone_number: "(415)772-9060",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
-  description: "Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
+  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
   price: 4,
   neighborhood: "Financial District/Embarcadero"
 })
@@ -55,7 +55,7 @@ french = Restaurant.create({
   cuisine: 2,
   phone_number: "(415)986-6491",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056836/pexels-photo-262047.jpg",
-  description:"French bistro with industrial-chic decor & outdoor seating plus a menu specializing in seafood.",
+  description:"French bistro with industrial-chic decor & outdoor seating plus a menu specializing in seafood. Plouf has terrace seating with heat lamps and a canopy. There are bistro style seating and an indoor fireplace. We have a 2-course Lunch Prix Fixe for $24 (Soup/Salad and Mussels) and a 3-course Dinner Prix Fixe $32 (Soup/Salad, Mussels and Dessert)",
   price: 3,
   neighborhood: "Financial District/Embarcadero"
 })
@@ -115,9 +115,20 @@ mexican = Restaurant.create({
   cuisine: 6,
   phone_number: "(415)683-1346",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523057732/kayleigh-harrington-418544-unsplash.jpg",
-  description:"Fans of Mexican sustainable eats grab a seat at the long bar & communal tables in blonde-wood decor.",
+  description:"Gracias Madre is truly an expression of who we are – it represents our deep love of and reverence for food, our commitment to health and sustainability, our unconditional love for our multicultural family and community, our devotion to the Earth and the divine feminine, and our commitment to raising consciousness on the planet. It is our intention that the emphasis we place on the sourcing of our food will bring consciousness in the community to the importance of sustainability and of buying and selling locally grown organic food.\n In an effort to cultivate a shared experience of nourishment through food and community, all tables at Gracias Madre are sat communally.",
   price: 2,
   neighborhood: "Mission"
+})
+
+mexican_review1 = Review.create({
+  author_id: 1,
+  restaurant_id: 7,
+  body: "We had Alex as our server. She was amazing as always. She's super attentive, friendly, and knowledgeable. We ordered the guac and tortillas ( the tortillas are amazingly soft) and tried the cheesy cauliflower which was out of this world. I love the desserts especially the cobbler and pairing it with the ginger mint tea is the perfect way to finish the evening.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
 })
 
 seafood = Restaurant.create({
@@ -149,12 +160,3 @@ vietnamese = Restaurant.create({
   price: 1,
   neighborhood: "Inner Sunset"
 })
-
-# res1 = Reservation.create({
-#   userId: 1,
-#   restaurantId: 2,
-#   num_guests: 2,
-#   date:,
-#   time:,
-#   points: 100
-# })

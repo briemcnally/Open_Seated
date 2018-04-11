@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ReservationSearchContainer from '../reservations/reservation_search_container';
 import ReviewFormContainer from './review_form_container';
 import { ProtectedRoute } from '../../util/route_util';
+import ReviewShowContainer from './review_show_container';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class RestaurantShow extends React.Component {
     this.props.requestRestaurant(nextProps.match.params.restaurantId);
   }
 }
+
 
   render(){
     if (this.props.restaurant === undefined) return "Loading...";
@@ -52,6 +54,9 @@ class RestaurantShow extends React.Component {
           <Link to={{pathname:`/restaurants/${this.props.restaurant.id}/review/new`}} className="res-search-button">
             Create a Review
           </Link>
+        </div>
+        <div>
+          <ReviewShowContainer />
         </div>
       </div>
     );

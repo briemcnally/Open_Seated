@@ -1,9 +1,9 @@
-// export const fetchReviews = (review) => (
-//   $.ajax({
-//     url: `/api/restaurants/${review.restaurant.id}/reviews`,
-//     method: 'GET'
-//   })
-// );
+export const fetchReviews = (restaurantId) => (
+  $.ajax({
+    url: `/api/restaurants/${restaurantId}/reviews`,
+    method: 'GET'
+  })
+);
 
 export const createReview = (review) => (
   $.ajax({

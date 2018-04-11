@@ -23,10 +23,12 @@ class RestaurantForm extends React.Component {
   render () {
     return (
       <div>
-        <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/v1523130044/pexels-photo-791810_1.jpg`}></img>
-        <div className="new-rest-form">
-          <h3>Add your restaurant to OpenSeated</h3>
-          <form onSubmit={this.handleSubmit}>
+        <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/c_scale,w_1200/v1523130044/pexels-photo-791810_1.jpg`}></img>
+        <div className="add-restaurant-form">
+          <div className="new-rest-header">
+            <h3>Add your restaurant to OpenSeated</h3>
+          </div>
+          <form className="new-rest-form" onSubmit={this.handleSubmit}>
             <label>
               <input
                 type="text"
@@ -80,38 +82,43 @@ class RestaurantForm extends React.Component {
                 type="text"
                 value={this.state.num_seats}
                 onChange={this.update('num_seats')}
-                placeholder="Number of Open Seats" />
+                placeholder="Number of Open (per day)" />
             </label>
-
-            <select>
-              <option value="American">American</option>
-              <option value="Chinese">Chinese</option>
-              <option value="French">French</option>
-              <option value="Italian">Italian</option>
-              <option value="Japanese">Japanese</option>
-              <option value="Mediterranean">Mediterranean</option>
-              <option value="Mexican">Mexican</option>
-              <option value="Seafood">Seafood</option>
-              <option value="Vietnamese">Vietnamese</option>
-              <option value="Thai">Thai</option>
-            </select>
 
             <label>
               <input
                 type="text"
                 value={this.state.phone_number}
                 onChange={this.update('phone_number')}
-                placeholder="Phone Number" />
+                placeholder="Phone Number: (xxx) xxx-xxxx" />
             </label>
-
-            <label>
+            
+            <div className="new-rest-description">
               <textarea
                 value={this.state.description}
                 placeholder="Description"
                 onChange={this.update('description')} />
-            </label>
+            </div>
 
-            <input type="submit" value="Add Restaurant" />
+            <div className="cusine-dropdown">
+              <select>
+                <option>Cuisine</option>
+                <option value="American">American</option>
+                <option value="Chinese">Chinese</option>
+                <option value="French">French</option>
+                <option value="Italian">Italian</option>
+                <option value="Japanese">Japanese</option>
+                <option value="Mediterranean">Mediterranean</option>
+                <option value="Mexican">Mexican</option>
+                <option value="Seafood">Seafood</option>
+                <option value="Vietnamese">Vietnamese</option>
+                <option value="Thai">Thai</option>
+              </select>
+            </div>
+
+            <div className="add-restaurant">
+              <input className="add-restaurant-button" type="submit" value="Add Restaurant" />
+            </div>
           </form>
         </div>
       </div>

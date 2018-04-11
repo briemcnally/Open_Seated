@@ -1,0 +1,57 @@
+.add-restaurant-form{
+  display: block;
+  padding-left: 100px;
+  padding-right: 100px;
+  padding-top: 25px;
+}
+
+.new-rest-header h3 {
+  font-size: 40px;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #D3D3D3;
+  margin-bottom: 20px;
+  font-weight: bolder;
+}
+
+.new-rest-form {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 20px;
+}
+
+.cusine-dropdown {
+  display: block;
+}
+
+.cusine-dropdown select{
+  margin-top: 10px;
+  font-size: 20px;
+  font-family: "Source Sans Pro", sans-serif
+}
+
+.add-restaurant{
+  display: block;
+  text-align: center;
+}
+
+.add-restaurant-button{
+  color: white;
+  background-color: #da3743;
+  padding: 10px 150px;
+  border-radius: 3px;
+  font-size: 24px;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.new-rest-description {
+  display: block;
+}
+
+.new-rest-description textarea{
+  width: 100%;
+    line-height: 2;
+    border: 1px solid #D3D3D3;
+}

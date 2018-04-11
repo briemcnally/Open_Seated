@@ -10,3 +10,86 @@
   justify-content: space-between;
   margin-top: 15px;
 }
+
+.review-form-div {
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.review-form-box {
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px;
+  font-family: 'Source Sans Pro', sans-serif;
+  justify-content: center;
+  padding: 25px;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(153, 154, 153, .4);
+}
+
+.form-h2 {
+  font-size: 30px;
+  font-weight: bolder;
+  padding-bottom: 15px;
+}
+
+
+.five-star-rating label {
+  display: flex;
+  justify-content: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+input[type=radio]:hover {
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  width: 27px;
+  height: 27px;
+  background-image: image-url("stars.png");
+  vertical-align: bottom;
+  margin-bottom: 15px;
+}
+
+input[type="radio"]:checked {
+  background-position: 30px 30px;
+}
+
+ol li:nth-of-type(2n) {
+  background-color: whitesmoke;
+}
+
+.header-textarea {
+  font-size: 25px;
+  padding-top: 20px;
+}
+
+.header-rate-dropdown {
+  font-size: 25px;
+  padding: 20px;
+}
+.textarea-box {
+    padding: 20px;
+}
+
+.textarea-box textarea {
+  line-height: 4;
+  border: 1px solid rgb(204, 204, 204);
+  box-sizing: border-box;
+  box-shadow: rgba(153, 154, 153, 0.4) 0px 2px 8px;
+  margin: 0px;
+  width: 100%;
+}
+
+.submit-review {
+  color: white;
+  background-color: #da3743;
+  padding: 10px 100px;
+}

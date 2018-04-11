@@ -9,7 +9,9 @@ class Profile extends React.Component {
   render() {
     return (
       <div>
-        <h1>You're reservation was successfully booked!</h1>
+        <div className="successful-booking">
+          <h1>You're reservation was successfully booked!</h1>
+        </div>
       </div>
     );
   }

@@ -39,23 +39,54 @@ class RestaurantShow extends React.Component {
             <div className="rest-info-box">
               <p>{restaurant.description}</p>
               <ul className="restaurant-details">
-                <li>Cuisine: {restaurant.cuisine}</li>
-                <li>Price: {restaurant.price}</li>
-                <li>Phone Number:{restaurant.phone_number}</li>
-                <li>Address:
-                  {restaurant.street_address}, {restaurant.city},
-                  {restaurant.state}, {restaurant.zip_code}
-                </li>
-                <li>Neighborhood: {restaurant.neighborhood}</li>
+                <div>
+                  <i class="fas fa-utensils"></i>
+                  <div className="rest-detail-columns">
+                    <h3>Cuisine:</h3>
+                    <li>{restaurant.cuisine}</li>
+                  </div>
+                </div>
+                <div>
+                  <i class="far fa-money-bill-alt"></i>
+                  <div className="rest-detail-columns">
+                    <h3>Price:</h3>
+                    <li>{restaurant.price}</li>
+                  </div>
+                </div>
+                <div>
+                  <i class="fas fa-phone"></i>
+                  <div className="rest-detail-columns">
+                    <h3>Phone Number:</h3>
+                    <li>{restaurant.phoneNumber}</li>
+                  </div>
+                </div>
+                <div>
+                  <i class="fas fa-location-arrow"></i>
+                  <div className="rest-detail-columns">
+                    <h3>Address:</h3>
+                    <li>
+                      {restaurant.streetAddress + ", " + restaurant.city + ", " +restaurant.state+ ", " + restaurant.zipCode}
+                    </li>
+                  </div>
+                </div>
+                <div>
+                  <i class="far fa-building"></i>
+                  <div className="rest-detail-columns">
+                    <h3>Neighborhood:</h3>
+                    <li>{restaurant.neighborhood}</li>
+                  </div>
+                </div>
               </ul>
             </div>
           </div>
-        <div className="review-form">
-          <Link to={{pathname:`/restaurants/${this.props.restaurant.id}/review/new`}} className="res-search-button">
-            Create a Review
-          </Link>
+        <div className="review-status">
+          <div className="review-redirect">
+            <Link to={{pathname:`/restaurants/${this.props.restaurant.id}/review/new`}} className="create-review-button">
+              Create a Review
+            </Link>
+          </div>
         </div>
-        <div>
+        <div className="review-show-cont">
           <ReviewShowContainer />
         </div>
       </div>

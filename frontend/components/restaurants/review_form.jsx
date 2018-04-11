@@ -30,7 +30,7 @@ class ReviewForm extends React.Component {
     const restaurantId = this.props.match.params.restaurantId;
     return(
       <div>
-        <div className="review-header">
+        <div className="review-form-header">
           <h1>{this.props.currentUser.fname} > Rate Your Dining Experience</h1>
         </div>
         <div className="review-form">

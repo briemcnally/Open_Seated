@@ -1,0 +1,95 @@
+.create-review-button {
+  background-color: #da3743;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+  margin-right: 200px;
+  margin-left: 200px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+// largest div
+.review-status {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+// next div with button to create review
+// .review-redirect {
+//   display: block;
+//   justify-content: left;
+//   padding: 20px;
+// }
+
+.review-sub-box {
+  display: block;
+  justify-content: left;
+  padding: 20px;
+}
+
+//next dive with details on restaurant
+.review-show-cont {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+}
+
+//ul of review show items
+.rest-index-list {
+
+}
+
+//li of review items
+.review-item {
+
+}
+
+.review-header h1 {
+  font-size: 1.75rem;
+  font-weight: bold;
+  line-height: 1.33;
+  color: rgb(45, 51, 63);
+  border-bottom: 1px solid rgb(216, 217, 219);
+  padding-bottom: 1rem;
+  margin: 0 0 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review-header h2 {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  font-weight: 500;
+  display: flex;
+}
+
+.review-header p {
+  font-size: 20px;
+}
+
+.review-item h2 {
+  font-size: 1.5rem;
+  line-height: 1.0;
+  font-weight: 500;
+  display: flex;
+}
+
+.review-post-header {
+  display: flex;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid #d8d9db;
+  margin-top: 15px;
+}
+
+.review-post-header h2 {
+  margin-left: 10px;
+}
+
+.review-post-header i {
+  line-height: 1.0;
+}

@@ -26,6 +26,15 @@ class User < ApplicationRecord
 
   attr_reader :password
 
+  has_many :favorites,
+    primary_key: :id,
+    foreign_key: :user_id,
+    class_name: :Favorite
+
+  has_many :favorite_restaurants,
+    through: :favorites,
+    source: :restaurant
+
   has_many :reservations,
     primary_key: :id,
     foreign_key: :user_id,

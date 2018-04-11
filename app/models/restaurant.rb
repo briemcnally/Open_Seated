@@ -33,12 +33,21 @@ class Restaurant < ApplicationRecord
   has_many :reviews,
     primary_key: :id,
     foreign_key: :restaurant_id,
-    class_name: :Reservation
+    class_name: :Review
 
   has_many :reservations,
     primary_key: :id,
     foreign_key: :restaurant_id,
     class_name: :Reservation
+
+  has_many :favorites,
+    primary_key: :id,
+    foreign_key: :restaurant_id,
+    class_name: :Favorite
+
+  has_many :favorite_diners,
+    through: :favorites,
+    source: :user
 
   def average_rating
     reviews.average(:rating)

@@ -31,6 +31,7 @@ class ReservationForm extends React.Component {
 
 
   render() {
+    const styles={margin: '10px', lineHeight: 2 };
     const header = (<h1>You're Almost Done!</h1>);
     return (
       <div>
@@ -60,10 +61,13 @@ class ReservationForm extends React.Component {
           </div>
           <form>
             <div className="row1">
-              <input type="text" placeholder="Phone Number"></input>
+              <input type="text"
+                    placeholder="Phone Number"
+                    style={styles}></input>
               <input type="text"
                       value={this.props.currentUser.email}
-                      onChange={this.update('email')}></input>
+                      onChange={this.update('email')}
+                      style={styles}></input>
             </div>
             <div className="row2">
               <select>
@@ -77,12 +81,15 @@ class ReservationForm extends React.Component {
               <textarea placeholder="Add a special request (optional)">
               </textarea>
             </div>
+            <div className="complete-reservation-button">
             <Link to={{pathname:`reservations/confirm`,
               reservation: this.state.reservation, restaurant: this.state.restaurant,
               currentUser: this.props.currentUser}}>
             <button className="res-confirm-button" onClick={this.handleSubmit}>Complete Reservation</button>
           </Link>
+          </div>
           </form>
+
         </div>
       </div>
     );

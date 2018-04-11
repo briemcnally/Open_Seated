@@ -81,7 +81,8 @@ class ReservationSearch extends React.Component {
                 <input
                   type="date"
                   value={this.state.date}
-                  onChange={this.handleChange('date')}>
+                  onChange={this.handleChange('date')}
+                  min={this.state.date}>
                 </input>
               </label>
               <label>Time

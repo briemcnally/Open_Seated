@@ -160,3 +160,8 @@ vietnamese = Restaurant.create({
   price: 1,
   neighborhood: "Inner Sunset"
 })
+
+user1_fav = Favorite.create ({
+  user_id: 1,
+  restaurant_id: 7
+})

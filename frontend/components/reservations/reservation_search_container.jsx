@@ -5,7 +5,7 @@ import { requestReservation, createReservation } from '../../actions/reservation
 import requestRestaurant from '../../actions/restaurant_actions';
 
 
-const converDate = (date) => {
+const convertDate = (date) => {
   const yyyy = date.getFullYear().toString();
   const mm = (date.getMonth() + 1).toString();
   const dd = date.getDate().toString();
@@ -18,7 +18,7 @@ const converDate = (date) => {
 const mapStateToProps = (state, ownProps) => {
   const reservation = {
     num_guests: 2,
-    date: converDate(new Date()),
+    date: convertDate(new Date()),
     time: '4:30 PM'
   };
   const currentUser = state.session.currentUser;

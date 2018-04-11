@@ -2,12 +2,27 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import ReservationSearchContainer from '../reservations/reservation_search_container';
 
+const convertDate = (date) => {
+  const yyyy = date.getFullYear().toString();
+  const mm = (date.getMonth() + 1).toString();
+  const dd = date.getDate().toString();
+
+  let mmChars = mm.split("");
+  let ddChars = dd.split("");
+  return yyyy + '-' + (mmChars[1] ? mm : "0" + mmChars[0]) + "-" + (ddChars[1] ? dd : "0" + ddChars[0]) ;
+};
+
 class RestaurantSearch extends React.Component {
   constructor(props){
     super(props);
-    this.state = { num_guests: "", date:"", time:"", searchTerm:"" };
+    this.state = {
+      num_guests: 2,
+      date: convertDate(new Date()),
+      time: '6:00 PM',
+      searchTerm:"" };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
+
 
   getReservationTimes() {
     const time = [];
@@ -49,7 +64,8 @@ class RestaurantSearch extends React.Component {
         </div>
         <form>
           <div className="main-page-search">
-            <select  onChange={this.handleChange('num_guests')}>
+            <div className="main-page-dropdown">
+            <select  value={this.state.num_guests} onChange={this.handleChange('num_guests')}>
               <option key="1" value="1">For 1</option>
               <option key="2" value="2">For 2</option>
               <option key="3" value="3">For 3</option>
@@ -71,26 +87,39 @@ class RestaurantSearch extends React.Component {
               <option key="19" value="19">For 19</option>
               <option key="20" value="20">For 20</option>
             </select>
+          </div>
 
+          <div className="main-page-calendar">
             <input
               type="date"
-              onChange={this.handleChange('date')}>
+              value={this.state.date}
+              onChange={this.handleChange('date')}
+              min={this.state.date}>
             </input>
+          </div>
 
-            <select onChange={this.handleChange('time')}>
+          <div className="main-page-dropdown">
+            <select value={this.state.time} onChange={this.handleChange('time')}>
               {this.getReservationTimes()}
             </select>
+          </div>
 
+          <div className="main-page-search-box">
             <label>
               <input type="text"
-                      placeholder="Locaiton, Restaurant, or Cuisine"
-                      onChange={this.handleChange('searchTerm')}>
+                      placeholder="Location, Restaurant, or Cuisine"
+                      onChange={this.handleChange('searchTerm')}
+                      style={{border: 'none'}}>
               </input>
             </label>
-            <input type="submit" className="main-page-submit-button"
+          </div>
+
+          <div className="main-page-submit-button">
+            <input type="submit"
                   onClick={this.handleSubmit}
                   value="Find a Table">
             </input>
+            </div>
           </div>
         </form>
       </div>

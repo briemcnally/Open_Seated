@@ -28,11 +28,23 @@
 .row2 select{
   width: 100%;
   border-radius: 0;
+  margin-left: 10px;
+  box-shadow: 0 2px 8px rgba(153, 154, 153, .4);
+  border: 1px solid #D3D3D3;
 }
 
 .row2 textarea{
   width: 100%;
   border-radius: 0;
+  margin-left: 20px;
+  border: 1px solid;
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(153, 154, 153, .4);
+  border: 1px solid #D3D3D3;
+}
+
+.row2 {
+  margin-top: 15px;
 }
 
 .res-confirm-button{
@@ -77,7 +89,23 @@
   font-size: 20px;
 }
 
+.complete-reservation-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
 
+.complete-reservation-button button {
+  color: white;
+  background-color: #da3743;
+  padding: 10px 150px;
+  border-radius: 3px;
+  font-size: 24px;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 
 .successful-booking {
   display: block;

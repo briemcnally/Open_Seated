@@ -6,7 +6,7 @@ import { withRouter } from 'react-router-dom';
 const mapStateToProps = (state, ownProps) => ({
   restaurantId: ownProps.match.params.restaurantId,
   reviews: Object.values(state.entities.reviews),
-  restaurant: Object.values(state.entities.restaurants)
+  restaurant: state.entities.restaurants[ownProps.match.params.restaurantId]
 });
 
 const mapDispatchToProps = dispatch => ({

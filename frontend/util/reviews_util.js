@@ -5,7 +5,7 @@
 //   })
 // );
 
-export const createReview= (review) => (
+export const createReview = (review) => (
   $.ajax({
     url: `/api/restaurants/${review.restaurant_id}/reviews`,
     method: 'POST',

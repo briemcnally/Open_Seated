@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ReservationSearchContainer from '../reservations/reservation_search_container';
+import ReviewFormContainer from './review_form_container';
+import { ProtectedRoute } from '../../util/route_util';
 
 class RestaurantShow extends React.Component {
   constructor(props) {
@@ -46,6 +48,11 @@ class RestaurantShow extends React.Component {
               </ul>
             </div>
           </div>
+        <div className="review-form">
+          <Link to={{pathname:`/restaurants/${this.props.restaurant.id}/review/new`}} className="res-search-button">
+            Create a Review
+          </Link>
+        </div>
       </div>
     );
   }

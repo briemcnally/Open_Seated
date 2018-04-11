@@ -2,15 +2,9 @@ import * as ReviewUtil from '../util/reviews_util';
 
 export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
 
-export const receiveReview = ({ review, averageRating, averageFoodRating,
-averageServiceRating, averageAmbienceRating, averageValueRating  }) => ({
+export const receiveReview = ({ review }) => ({
   type: RECEIVE_REVIEW,
-  review,
-  averageRating,
-  averageFoodRating,
-  averageServiceRating,
-  averageAmbienceRating,
-  averageValueRating
+  review
 });
 
 export const createReview = formReview => dispatch => (

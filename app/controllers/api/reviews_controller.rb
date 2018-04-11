@@ -7,10 +7,10 @@ class Api::ReviewsController < ApplicationController
 
   def create
     @review = Review.new(review_params)
-    @review.user_id = current_user.id
+    @review.author_id = current_user.id
 
     if @review.save
-      render :show
+      render 'api/reviews/show'
     else
       render json: @review.errors.full_messages, status: 422
     end
@@ -33,7 +33,7 @@ class Api::ReviewsController < ApplicationController
 
   private
 
-  def reservation_params
+  def review_params
     params.require(:review).permit(:restaurant_id, :body, :food, :service,
               :ambience, :value, :rating)
   end

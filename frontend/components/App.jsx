@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch, withRouter, Redirect, Link, HashRouter} from 'react-router-dom';
-import { AuthRoute } from '../util/route_util';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 
 
@@ -23,11 +23,11 @@ const App = () => (
     <Switch>
       <AuthRoute exact path="/signup" component={SignupFormContainer} />
       <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <Route exact path="/reservations/confirmation" component={ProfileContainer} />
-      <Route exact path="/restaurants/new" component={CreateRestaurantFormContainer} />
+      <ProtectedRoute exact path="/reservations/confirmation" component={ProfileContainer} />
+      <ProtectedRoute exact path="/restaurants/new" component={CreateRestaurantFormContainer} />
       <Route exact path="/restaurants/search" component={RestaurantSearchContainer} />
-      <Route exact path ="/restaurants/:restaurantId/review/new" component={ReviewFormContainer}/>
-      <Route exact path="/restaurants/:restaurantId/reservation/new" component={ReservationFormContainer} />
+      <ProtectedRoute exact path ="/restaurants/:restaurantId/review/new" component={ReviewFormContainer}/>
+      <ProtectedRoute exact path="/restaurants/:restaurantId/reservation/new" component={ReservationFormContainer} />
       <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
       <Route exact path="/restaurants" component={RestaurantIndexContainer} />
       <Route exact path="/reservations" component={ReservationSearchContainer}/>

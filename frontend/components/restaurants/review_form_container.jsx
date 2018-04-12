@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { createReview } from '../../actions/reviews_actions';
+import { createReview, receiveReviewErrors } from '../../actions/reviews_actions';
 import ReviewForm from './review_form';
 
 const mapStateToProps = (state, ownProps) => ({
@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  createReview: review => dispatch(createReview(review))
+  createReview: review => dispatch(createReview(review)),
+  clearErrors: (errors) => dispatch(receiveReviewErrors(errors))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReviewForm);

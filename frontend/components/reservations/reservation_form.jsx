@@ -9,6 +9,9 @@ class ReservationForm extends React.Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors([]);
+  }
 
   handleSubmit(e) {
     e.preventDefault();

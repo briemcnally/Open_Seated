@@ -19,7 +19,12 @@ class ReviewForm extends React.Component {
     this.props.createReview(this.state).then(() =>
       this.props.history.push(`/restaurants/${this.props.match.params.restaurantId}`));
   }
-  
+
+  componentWillUnmount() {
+    this.props.clearErrors([]);
+  }
+
+
   handleChange(field) {
     return(e) => {
       this.setState({[field]: e.target.value});

@@ -8,6 +8,7 @@ import ReviewShowContainer from './review_show_container';
 class RestaurantShow extends React.Component {
   constructor(props) {
     super(props);
+    this.state = this.props.state;
     this.handleFavorite = this.handleFavorite.bind(this);
     this.favorited = this.favorited.bind(this);
   }
@@ -23,22 +24,24 @@ class RestaurantShow extends React.Component {
 }
   handleFavorite(e) {
     e.preventDefault();
-    if (this.favorited()) {
-      this.props.deleteFavorite(this.props.match.params.restaurantId);
-    } else {
+    if (this.favorited() === undefined) {
       this.props.addFavorite(this.props.match.params.restaurantId);
+    } else {
+      this.props.deleteFavorite(this.props.match.params.restaurantId);
     }
   }
 
   favorited(){
-    if (this.props.currentUser.favoriteRestaurants !== undefined) {
+    if (this.state.session.currentUser === null) {
+      return undefined;
+    } else if (this.props.currentUser.favoriteRestaurants !== undefined) {
       const rest = parseInt(this.props.match.params.restaurantId);
       let result = this.props.currentUser.favoriteRestaurants.find(el =>
         el === rest
       );
       return result;
     } else {
-      return null;
+      return undefined;
     }
   }
 

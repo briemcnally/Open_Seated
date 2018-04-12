@@ -14,6 +14,10 @@ class RestaurantForm extends React.Component {
     };
   }
 
+  componentWillUnmount() {
+    this.props.clearErrors([]);
+  }
+
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value});

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import ReservationForm from './reservation_form';
-import { createReservation } from '../../actions/reservations_actions';
+import { createReservation, receiveReservationErrors } from '../../actions/reservations_actions';
 import { requestRestaurant } from '../../actions/restaurant_actions';
 
 
@@ -14,6 +14,7 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
   createReservation: reservation => dispatch(createReservation(reservation)),
+  clearErrors: (errors) => dispatch(receiveReservationErrors(errors))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ReservationForm);

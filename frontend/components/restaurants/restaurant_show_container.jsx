@@ -5,6 +5,7 @@ import RestaurantShow from './restaurant_show';
 import {withRouter} from 'react-router-dom';
 import { createReview } from '../../actions/reviews_actions';
 import { addFavorite, deleteFavorite } from '../../actions/favorites_actions';
+import { receiveCurrentUser } from '../../actions/session_actions';
 
 const mapStateToProps = (state, ownProps) => ({
   restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
@@ -18,6 +19,7 @@ const mapDispatchToProps = dispatch => ({
   createReview: (review) => dispatch(createReview(review)),
   addFavorite: (restaurantId) => dispatch(addFavorite(restaurantId)),
   deleteFavorite: (restaurantId) => dispatch(deleteFavorite(restaurantId)),
+  receiveCurrentUser: (currentUser) => dispatch(receiveCurrentUser(currentUser))
 
 });
 

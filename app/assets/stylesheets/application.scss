@@ -17,23 +17,21 @@
 body {
   background: #f7f7f7;
   font-family: 'Source Sans Pro', sans-serif;
-  max-width: 1600px;
-  margin: auto;
 }
 
 .home-link {
   display: flex;
 }
 main .main-container {
-   min-height: 900px;
+   min-height: 1000px;
    width: 1200px;
    background: white;
    padding: 0px 20px;
-   border-radius: 5px;
+   // border-radius: 5px;
 }
 
 .splash {
-  width: 1200px;
+  width: 100%;
 }
 
 header {
@@ -46,7 +44,6 @@ header {
   height: 55px;
   border-bottom: 1px solid #D3D3D3;
   font-family: 'Source Sans Pro', sans-serif;
-  margin-top: 15px;
   border-top: 1px solid #D3D3D3;
 }
 

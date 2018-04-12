@@ -64,11 +64,13 @@
   width: 10%;
   border: 1px solid #D3D3D3;
   padding: 5px;
+  font-size: 16px;
 }
 
 .main-page-dropdown select {
   border: none;
   background-color: white;
+  font-size: 16px;
 }
 
 .main-page-calendar {
@@ -76,6 +78,7 @@
   border: 1px solid #D3D3D3;
   padding: 5px;
   width: 15%;
+  font-size: 16px;
 }
 
 .main-page-search-box {
@@ -83,6 +86,7 @@
   border: 1px solid #D3D3D3;
   padding: 5px;
   width: 45%;
+  font-size: 18px;
 }
 .main-page-search-box input {
   border: none;
@@ -191,4 +195,28 @@
   font-weight: bolder;
   background-size: 100%;
   background-position-y: -20px;
+}
+
+.best-mexican {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1522968733/tacos-1904921_640.jpg);
+  background-repeat: no-repeat;
+}
+
+.best-italian {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1522968951/15862329469_78f002d81e_m.jpg);
+  background-repeat: no-repeat;
+}
+
+.best-japanese {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1522968090/pexels-photo-213939.jpg);
+  background-repeat: no-repeat;
+}
+
+.best-chinese {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1522967620/pexels-photo-955137.jpg);
+  background-repeat: no-repeat;
+}
+
+.featured-restaurants {
+  width: 100%;
 }

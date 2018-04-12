@@ -18,20 +18,20 @@ class MainPage extends React.Component {
         <h1>Top Cuisines Near San Francisco</h1>
         </div>
         <div>
-          <table>
+          <table className="featured-restaurants">
             <tbody>
             <tr>
-              <th>
-                <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1522968733/tacos-1904921_640.jpg`}></img>
+              <th className="best-mexican">
+                Best Mexican Restaurants Around You
               </th>
-              <th>
-                <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1522968951/15862329469_78f002d81e_m.jpg`}></img>
+              <th className="best-italian">
+                Best Italian Restaurants Around You
               </th>
-              <th>
-                <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1522968090/pexels-photo-213939.jpg`}></img>
+              <th className="best-japanese">
+                Best Japanese Restaurants Around You
               </th>
-              <th>
-                <img src={`http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1522967620/pexels-photo-955137.jpg`}></img>
+              <th className="best-chinese">
+                Best Chinese Restaurants Around You
               </th>
             </tr>
           </tbody>

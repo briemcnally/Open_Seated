@@ -9,7 +9,8 @@ import requestRestaurant from '../../actions/restaurant_actions';
 const mapStateToProps = (state, ownProps) => ({
   reservation: state.reservations,
   restaurant: state.restaurants,
-  currentUser: state.currentUser
+  currentUser: state.currentUser,
+  errors: state.errors.reservations
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

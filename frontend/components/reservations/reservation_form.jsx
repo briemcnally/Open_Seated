@@ -13,20 +13,30 @@ class ReservationForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
 
-    const newReservation = { user_id: this.props.currentUser.id,
-                          restaurant_id: this.state.restaurant.id,
+    const newReservation = {restaurant_id: this.state.restaurant.id,
                           date: this.state.reservation.date,
                           time: this.state.reservation.time,
-                          num_guests: this.state.reservation.num_guests,
-                          points: 100 };
-    this.props.createReservation(newReservation).then(
-      this.props.history.push(`/reservations/confirmation`));
+                          num_guests: this.state.reservation.num_guests};
+    this.props.createReservation(newReservation).then(() =>
+      this.props.history.push('/reservations/confirmation'));
   }
 
   update(field) {
     return (e) => {
       this.setState({[field]: e.target.value});
     };
+  }
+
+  renderErrors(){
+    return(
+      <ul>
+        {this.props.errors.map((error, index) => (
+          <li key={index}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -36,6 +46,9 @@ class ReservationForm extends React.Component {
       <div>
         <div className="page-header-content">
           <h1>You're Almost Done!</h1>
+        </div>
+        <div className="rest-form-errors">
+          {this.renderErrors()}
         </div>
         <div className="confirm-res-details">
           <img className= "rest-image" src={this.state.restaurant.imgUrl}></img>
@@ -81,11 +94,7 @@ class ReservationForm extends React.Component {
               </textarea>
             </div>
             <div className="complete-reservation-button">
-            <Link to={{pathname:`reservations/confirm`,
-              reservation: this.state.reservation, restaurant: this.state.restaurant,
-              currentUser: this.props.currentUser}}>
             <button className="res-confirm-button" onClick={this.handleSubmit}>Complete Reservation</button>
-          </Link>
           </div>
           </form>
 

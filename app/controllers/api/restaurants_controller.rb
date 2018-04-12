@@ -29,7 +29,7 @@ class Api::RestaurantsController < ApplicationController
   def restaurant_params
     params.require(:restaurant).permit(:name, :street_address,
       :city, :state, :zip_code, :num_seats, :cuisine, :img_url,
-      :phone_number, :description)
+      :phone_number, :description, :price, :neighborhood)
   end
 
 end

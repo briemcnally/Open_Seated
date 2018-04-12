@@ -40,12 +40,12 @@ export const requestReservation = (reservationId) => dispatch => (
    )
 ));
 
-export const createReservation = (formReservation) => dispatch => (
+export const createReservation = formReservation => dispatch => (
   ReservationAPIUtil.createReservation(formReservation).then(
-    reservation => (dispatch(receiveReservation(reservation))),
+    restaurant => dispatch(receiveReservation(restaurant)),
     err => (dispatch(receiveReservationErrors(err.responseJSON))
-  )
-));
+  ))
+);
 
 export const deleteReservation = (reservationId) => dispatch => (
   ReservationAPIUtil.deleteReservation(reservationId).then(

@@ -4,7 +4,7 @@ import { RECEIVE_RESERVATION,
         RECEIVE_RESERVATION_ERRORS } from '../actions/reservations_actions';
 import { merge } from 'lodash';
 
-export default(state = {}, action) => {
+export default(state = [], action) => {
   Object.freeze(state);
   let newState = merge({}, state);
   switch(action.type){
@@ -15,6 +15,7 @@ export default(state = {}, action) => {
     case REMOVE_RESERVATION:
       return [];
     case RECEIVE_RESERVATION_ERRORS:
+      debugger
       return action.errors;
     default:
       return state;

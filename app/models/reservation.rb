@@ -8,14 +8,16 @@
 #  date          :datetime         not null
 #  time          :datetime         not null
 #  num_guests    :integer          not null
-#  points        :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  status        :string
+#  phone_number  :string
+#  occasion      :integer
+#  request       :string
 #
 
 class Reservation < ApplicationRecord
-  validates :num_guests, :date, :time, :points, presence: true
+  validates :num_guests, :date, :time, presence: true
   validate :reservation_date_not_in_past
   # validate :available_seats
 
@@ -51,7 +53,7 @@ class Reservation < ApplicationRecord
 
   def reservation_date_not_in_past
     if date < Time.now
-      errors.add(:date, "Date cannot be in the past")
+      errors.add(:date, " cannot be in the past!")
     end
   end
 end

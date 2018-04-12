@@ -8,10 +8,12 @@
 #  date          :datetime         not null
 #  time          :datetime         not null
 #  num_guests    :integer          not null
-#  points        :integer          not null
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
 #  status        :string
+#  phone_number  :string
+#  occasion      :integer
+#  request       :string
 #
 
 require 'test_helper'

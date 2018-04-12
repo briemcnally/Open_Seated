@@ -8,7 +8,8 @@ import { requestRestaurant } from '../../actions/restaurant_actions';
 const mapStateToProps = (state, ownProps) => ({
   state: state,
   restaurant: state.entities.restaurants[ownProps.match.params.restaurantId],
-  currentUser: state.session.currentUser
+  currentUser: state.session.currentUser,
+  errors: state.errors.reservations
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({

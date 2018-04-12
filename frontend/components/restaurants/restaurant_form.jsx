@@ -14,6 +14,12 @@ class RestaurantForm extends React.Component {
     };
   }
 
+  update(field) {
+    return (e) => {
+      this.setState({[field]: e.target.value});
+    };
+  }
+
   handleSubmit(e) {
     e.preventDefault();
     this.props.createRestaurant(this.state).then(() =>
@@ -143,9 +149,9 @@ class RestaurantForm extends React.Component {
             <div className="price-dropdown">
               <select onChange={this.update('price')}>
                 <option>Price</option>
-                <option> $30 and under </option>
-                <option > $31 to $50 </option>
-                <option > $50 and over </option>
+                <option value="2"> $30 and under </option>
+                <option value="3"> $31 to $50 </option>
+                <option value="4"> $50 and over </option>
               </select>
             </div>
 

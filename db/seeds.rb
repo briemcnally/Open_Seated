@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Restaurant.destroy_all
+Review.destroy_all
+Reservation.destroy_all
 
 guest = User.create({
   username: "GuestDemo",
@@ -121,8 +125,8 @@ mexican = Restaurant.create({
 })
 
 mexican_review1 = Review.create({
-  author_id: 1,
-  restaurant_id: 7,
+  author_id: guest.id,
+  restaurant_id: mexican.id,
   body: "We had Alex as our server. She was amazing as always. She's super attentive, friendly, and knowledgeable. We ordered the guac and tortillas ( the tortillas are amazingly soft) and tried the cheesy cauliflower which was out of this world. I love the desserts especially the cobbler and pairing it with the ginger mint tea is the perfect way to finish the evening.",
   food: 4.5,
   service: 4.1,
@@ -162,6 +166,6 @@ vietnamese = Restaurant.create({
 })
 
 user1_fav = Favorite.create ({
-  user_id: 1,
-  restaurant_id: 7
+  user_id: guest.id,
+  restaurant_id: mexican.id
 })

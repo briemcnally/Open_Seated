@@ -29,7 +29,6 @@ class ReservationForm extends React.Component {
     };
   }
 
-
   render() {
     const styles={margin: '10px', lineHeight: 2 };
     const header = (<h1>You're Almost Done!</h1>);

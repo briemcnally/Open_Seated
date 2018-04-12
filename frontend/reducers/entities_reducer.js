@@ -7,5 +7,5 @@ import reviews from './reviews_reducer';
 export default combineReducers({
   restaurants,
   reservations,
-  reviews
+  reviews,
 });

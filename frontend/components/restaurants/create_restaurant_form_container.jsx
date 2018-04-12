@@ -2,8 +2,8 @@ import { connect } from 'react-redux';
 import { createRestaurant } from  '../../actions/restaurant_actions';
 import RestaurantForm from './restaurant_form';
 
-const mapStateToProps = (state, ownProps) => {
-  const restaurant = {
+const mapStateToProps = (state, ownProps) => ({
+  restaurant: {
     name: "",
     street_address: "",
     city: "",
@@ -15,11 +15,9 @@ const mapStateToProps = (state, ownProps) => {
     img_url: "",
     description: "",
     neighborhood: "",
-    price: ""
-  };
-
-  return { restaurant };
-};
+    price: ""},
+  errors: state.errors.restaurants,
+});
 
 const mapDispatchToProps = dispatch => ({
   createRestaurant: restaurant => dispatch(createRestaurant(restaurant))

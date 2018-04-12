@@ -84,8 +84,111 @@
   padding: 5px;
   width: 45%;
 }
-
 .main-page-search-box input {
   border: none;
   width: auto;
+}
+
+.top-cuisines-box {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(153, 154, 153, 0.4);
+}
+
+.top-cuisine-header h1 {
+  font-size: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8d9db;
+  margin-bottom: 20px;
+}
+
+.featured-areas-box {
+  display: block;
+  width: 85%;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0 2px 8px rgba(153, 154, 153, 0.4);
+}
+
+.featured-areas-header h1 {
+  font-size: 25px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d8d9db;
+  margin-bottom: 20px;
+}
+
+.featured-areas {
+  width: 100%;
+}
+
+.featured-areas th {
+  width: 33.3%;
+  border: 1px solid black;
+}
+
+.featured-areas tr {
+  height: 150px;
+  text-align: center;
+}
+
+.featured-areas td {
+  border: 1px solid black;
+}
+
+.nyc {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/c_fit,w_200/v1523515324/brooklyn-bridge-2380682_640.jpg);
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.chicago {
+    background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/v1523515324/chicago-1791002_640.jpg);
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    background-size: 100%;
+}
+
+
+.la {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/c_fit,w_200/v1523549917/Screen_Shot_2018-04-12_at_9.18.10_AM.png);
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  background-size: 100%;
+}
+
+
+.sf {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/v1523550023/pexels-photo-201101_1.jpg);
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  background-size: 100%;
+  background-position-y: -50px;
+}
+
+.los-vegas {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/v1523550413/Screen_Shot_2018-04-12_at_9.26.27_AM.png);
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  background-size: 100%;
+  background-position-y: -20px;
+}
+
+.miami {
+  background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/v1523551107/19604431_s.jpg);
+  color: white;
+  font-size: 30px;
+  font-weight: bolder;
+  background-size: 100%;
+  background-position-y: -20px;
 }

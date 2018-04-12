@@ -1,15 +1,15 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import Profile from './profile';
+import Confirmation from './confirmation';
 import { requestReservation, createReservation } from '../../actions/reservations_actions';
 import requestRestaurant from '../../actions/restaurant_actions';
-import { withRouter } from 'react-router-dom';
 
 
 
 const mapStateToProps = (state, ownProps) => ({
-  restaurant: state.entities.restaurants,
-  currentUser: state.session.currentUser
+  reservation: state.reservations,
+  restaurant: state.restaurants,
+  currentUser: state.currentUser
 });
 
 const mapDispatchToProps = (dispatch, ownProps) => ({
@@ -18,4 +18,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   createReservation: formReservation => dispatch(createReservation(formReservation))
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Profile));
+export default connect(mapStateToProps, mapDispatchToProps)(Confirmation);

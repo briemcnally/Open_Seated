@@ -7,7 +7,7 @@ class Api::ReservationsController < ApplicationController
 
   def create
     @reservation = Reservation.new(reservation_params)
-    # @reservation.user_id = current_user.id
+    @reservation.user_id = current_user.id
 
     if @reservation.save
       render :show
@@ -34,6 +34,6 @@ class Api::ReservationsController < ApplicationController
   private
 
   def reservation_params
-    params.require(:reservation).permit(:user_id, :restaurant_id, :num_guests, :date, :time, :points)
+    params.require(:reservation).permit(:restaurant_id, :num_guests, :date, :time, :points)
   end
 end

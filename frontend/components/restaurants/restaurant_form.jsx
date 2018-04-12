@@ -20,6 +20,19 @@ class RestaurantForm extends React.Component {
       this.props.history.push('/'));
   }
 
+  renderErrors(){
+    return(
+      <ul>
+        {this.props.errors.map((error, index) => (
+          <li key={index}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+
   render () {
     return (
       <div>
@@ -27,6 +40,9 @@ class RestaurantForm extends React.Component {
         <div className="add-restaurant-form">
           <div className="new-rest-header">
             <h3>Add your restaurant to OpenSeated</h3>
+          </div>
+          <div className="rest-form-errors">
+            {this.renderErrors()}
           </div>
           <form className="new-rest-form" onSubmit={this.handleSubmit}>
             <label>
@@ -92,7 +108,15 @@ class RestaurantForm extends React.Component {
                 onChange={this.update('phone_number')}
                 placeholder="Phone Number: (xxx) xxx-xxxx" />
             </label>
-            
+
+            <label>
+              <input
+                type="text"
+                value={this.state.imgUrl}
+                onChange={this.update('img_url')}
+                placeholder="Image URL (optional)" />
+            </label>
+
             <div className="new-rest-description">
               <textarea
                 value={this.state.description}
@@ -101,7 +125,7 @@ class RestaurantForm extends React.Component {
             </div>
 
             <div className="cusine-dropdown">
-              <select>
+              <select onChange={this.update('cuisine')}>
                 <option>Cuisine</option>
                 <option value="American">American</option>
                 <option value="Chinese">Chinese</option>
@@ -116,9 +140,19 @@ class RestaurantForm extends React.Component {
               </select>
             </div>
 
+            <div className="price-dropdown">
+              <select onChange={this.update('price')}>
+                <option>Price</option>
+                <option> $30 and under </option>
+                <option > $31 to $50 </option>
+                <option > $50 and over </option>
+              </select>
+            </div>
+
             <div className="add-restaurant">
               <input className="add-restaurant-button" type="submit" value="Add Restaurant" />
             </div>
+
           </form>
         </div>
       </div>

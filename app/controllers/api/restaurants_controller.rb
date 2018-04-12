@@ -3,10 +3,10 @@ class Api::RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
 
-    if @user.save!
+    if @restaurant.save
       render "api/restaurants/show"
     else
-      render json: @user.errors.full_messages, status: 422
+      render json: ['All fields are required!'], status: 422
     end
   end
 
@@ -26,8 +26,8 @@ class Api::RestaurantsController < ApplicationController
 
   private
 
-  def user_params
-    params.require(:resaurant).permit(:name, :street_address,
+  def restaurant_params
+    params.require(:restaurant).permit(:name, :street_address,
       :city, :state, :zip_code, :num_seats, :cuisine, :img_url,
       :phone_number, :description)
   end

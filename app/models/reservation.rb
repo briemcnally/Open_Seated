@@ -16,6 +16,7 @@
 
 class Reservation < ApplicationRecord
   validates :num_guests, :date, :time, :points, presence: true
+  validate :reservation_date_not_in_past
   # validate :available_seats
 
   belongs_to :restaurant,
@@ -48,4 +49,9 @@ class Reservation < ApplicationRecord
   #   arr.reduce(:+)
   # end
 
+  def reservation_date_not_in_past
+    if date < Time.now
+      errors.add(:date, "Date cannot be in the past")
+    end
+  end
 end

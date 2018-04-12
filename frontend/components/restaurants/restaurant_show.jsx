@@ -8,6 +8,8 @@ import ReviewShowContainer from './review_show_container';
 class RestaurantShow extends React.Component {
   constructor(props) {
     super(props);
+    this.handleFavorite = this.handleFavorite.bind(this);
+    this.favorited = this.favorited.bind(this);
   }
 
   componentDidMount(){
@@ -19,11 +21,49 @@ class RestaurantShow extends React.Component {
     this.props.requestRestaurant(nextProps.match.params.restaurantId);
   }
 }
+  handleFavorite(e) {
+    e.preventDefault();
+    if (this.favorited()) {
+      this.props.deleteFavorite(this.props.match.params.restaurantId);
+    } else {
+      this.props.addFavorite(this.props.match.params.restaurantId);
+    }
+  }
 
+  favorited(){
+    if (this.props.currentUser.favoriteRestaurants !== undefined) {
+      const rest = parseInt(this.props.match.params.restaurantId);
+      let result = this.props.currentUser.favoriteRestaurants.find(el =>
+        el === rest
+      );
+      return result;
+    } else {
+      return null;
+    }
+  }
 
   render(){
     if (this.props.restaurant === undefined) return "Loading...";
     const { restaurant } = this.props;
+    const favoriteButton  = (this.favorited() === undefined ) ? (
+      <div className="favorite-container">
+          <button className="favorite-button" onClick={this.handleFavorite}>
+              <div className="favorite-icon">
+                <i className="far fa-bookmark"></i>
+              </div>
+              <div className="favorite-button-text">Favorite this restaurant</div>
+          </button>
+      </div>
+    ) : (
+      <div className="favorite-container">
+          <button className="favorite-button" onClick={this.handleFavorite}>
+              <div className="favorite-icon">
+                <i className="far fa-bookmark"></i>
+              </div>
+              <div className="favorite-button-text">Remove from favorites</div>
+          </button>
+      </div>
+    );
     return (
       <div>
         <div>
@@ -36,16 +76,7 @@ class RestaurantShow extends React.Component {
           <div className="res-search-bar">
             <ReservationSearchContainer restaurant={this.props.restaurant}/>
           </div>
-          <div className="favorite-container">
-              <div className="favorite-button">
-                <Link to={{pathname:`/users/${this.props.currentUser.id}`}}>
-                  <div className="favorite-icon">
-                    <i className="far fa-bookmark"></i>
-                  </div>
-                  <div className="favorite-button-text">Save this restaurant</div>
-                </Link>
-              </div>
-          </div>
+          <div>{favoriteButton}</div>
             <div className="rest-info-box">
               <p>{restaurant.description}</p>
               <ul className="restaurant-details">

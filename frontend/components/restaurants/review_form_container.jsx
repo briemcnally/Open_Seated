@@ -5,7 +5,8 @@ import ReviewForm from './review_form';
 const mapStateToProps = (state, ownProps) => ({
   restaurants: state.entities.restaurants,
   currentUser: state.session.currentUser,
-  state: state
+  state: state,
+  errors: state.errors.reviews
 });
 
 const mapDispatchToProps = dispatch => ({

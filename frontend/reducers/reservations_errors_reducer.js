@@ -15,7 +15,6 @@ export default(state = [], action) => {
     case REMOVE_RESERVATION:
       return [];
     case RECEIVE_RESERVATION_ERRORS:
-      debugger
       return action.errors;
     default:
       return state;

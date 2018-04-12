@@ -12,7 +12,7 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render 'api/reviews/show'
     else
-      render json: @review.errors.full_messages, status: 422
+      render json: ['All fields are required!'], status: 422
     end
   end
 

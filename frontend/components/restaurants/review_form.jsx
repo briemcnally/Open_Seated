@@ -16,14 +16,26 @@ class ReviewForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.createReview(this.state).then(
+    this.props.createReview(this.state).then(() =>
       this.props.history.push(`/restaurants/${this.props.match.params.restaurantId}`));
   }
-
+  
   handleChange(field) {
     return(e) => {
       this.setState({[field]: e.target.value});
     };
+  }
+
+  renderErrors(){
+    return(
+      <ul>
+        {this.props.errors.map((error, index) => (
+          <li key={index}>
+            {error}
+          </li>
+        ))}
+      </ul>
+    );
   }
 
   render() {
@@ -32,6 +44,9 @@ class ReviewForm extends React.Component {
       <div>
         <div className="review-form-header">
           <h1>{this.props.currentUser.fname} > Rate Your Dining Experience</h1>
+        </div>
+        <div className="rest-form-errors">
+          {this.renderErrors()}
         </div>
         <div className="review-form-div">
           <form className="review-form-box" onSubmit={this.handleSubmit}>

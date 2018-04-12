@@ -20,10 +20,11 @@ export const receiveReviewErrors = (errors) => ({
 });
 
 export const createReview = formReview => dispatch => (
-  ReviewUtil.createReview(formReview).then( review =>
-    dispatch(receiveReview(review))
-  ), err => (dispatch(receiveReviewErrors(err.responseJSON))
-));
+  ReviewUtil.createReview(formReview).then(
+    restaurant => dispatch(receiveReview(restaurant)),
+    err => (dispatch(receiveReviewErrors(err.responseJSON))
+  ))
+);
 
 export const fetchReviews = restaurantId => dispatch => (
   ReviewUtil.fetchReviews(restaurantId).then( reviews =>

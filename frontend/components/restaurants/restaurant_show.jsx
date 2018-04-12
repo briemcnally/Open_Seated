@@ -36,32 +36,42 @@ class RestaurantShow extends React.Component {
           <div className="res-search-bar">
             <ReservationSearchContainer restaurant={this.props.restaurant}/>
           </div>
+          <div className="favorite-container">
+              <div className="favorite-button">
+                <Link to={{pathname:`/users/${this.props.currentUser.id}`}}>
+                  <div className="favorite-icon">
+                    <i className="far fa-bookmark"></i>
+                  </div>
+                  <div className="favorite-button-text">Save this restaurant</div>
+                </Link>
+              </div>
+          </div>
             <div className="rest-info-box">
               <p>{restaurant.description}</p>
               <ul className="restaurant-details">
                 <div>
-                  <i class="fas fa-utensils"></i>
+                  <i className="fas fa-utensils"></i>
                   <div className="rest-detail-columns">
                     <h3>Cuisine:</h3>
                     <li>{restaurant.cuisine}</li>
                   </div>
                 </div>
                 <div>
-                  <i class="far fa-money-bill-alt"></i>
+                  <i className="far fa-money-bill-alt"></i>
                   <div className="rest-detail-columns">
                     <h3>Price:</h3>
                     <li>{restaurant.price}</li>
                   </div>
                 </div>
                 <div>
-                  <i class="fas fa-phone"></i>
+                  <i className="fas fa-phone"></i>
                   <div className="rest-detail-columns">
                     <h3>Phone Number:</h3>
                     <li>{restaurant.phoneNumber}</li>
                   </div>
                 </div>
                 <div>
-                  <i class="fas fa-location-arrow"></i>
+                  <i className="fas fa-location-arrow"></i>
                   <div className="rest-detail-columns">
                     <h3>Address:</h3>
                     <li>
@@ -70,7 +80,7 @@ class RestaurantShow extends React.Component {
                   </div>
                 </div>
                 <div>
-                  <i class="far fa-building"></i>
+                  <i className="far fa-building"></i>
                   <div className="rest-detail-columns">
                     <h3>Neighborhood:</h3>
                     <li>{restaurant.neighborhood}</li>

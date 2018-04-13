@@ -542,7 +542,7 @@ nyc_american = Restaurant.create({
   zip_code: "10012",
   num_seats: 10,
   cuisine: 2,
-  phone_number: "(415)772-9060",
+  phone_number: "(212) 965-1414",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
   description: "Balthazar is a traditional French Brasserie with a bustling railway station atmosphere. Our kitchen serves a variety of meat and poultry dishes including: Duck Shepherds Pie, Roasted Chicken and Steak Frites. Balthazar specializes in seafood with an array of fish entrees and a complete raw oyster and shellfish bar.",
   price: 3,
@@ -561,67 +561,110 @@ nyc_american_review1 = Review.create({
 })
 
 #chicago
-american = Restaurant.create({
-  name: "Wayfare Tavern",
-  street_address:"558 Sacramento St.",
-  city: "San Francisco",
-  state: "CA",
-  zip_code: "94111",
-  num_seats: 15,
-  cuisine: 0,
-  phone_number: "(415)772-9060",
+chinese_chicago = Restaurant.create({
+  name: "Imperial Lamian",
+  street_address:"6 W Hubbard St.",
+  city: "Chicago",
+  state: "IL",
+  zip_code: "60654",
+  num_seats: 10,
+  cuisine: 1,
+  phone_number: "(312) 595-9440",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
-  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
-  price: 4,
-  neighborhood: "Financial District/Embarcadero"
+  description: "Welcome to Imperial Lamian, we feature the traditional art of authentic Chinese cuisine in a sophisticated environment. Master Chefs prepare your meals using ancient techniques of noodle making, dumpling folding and wok cooking. Complimented by our unique beverage program - custom blended teas, a comprehensive beverage selection that includes wine, sake, craft beer, Asian whiskey, single malts and specialty cocktails. Open for Lunch, Dinner and Brunch.",
+  neighborhood: "River North"
+})
+
+chicago_chinese_review1 = Review.create({
+  author_id: user8.id,
+  restaurant_id: chinese_chicago.id,
+  body: "Visiting Imperial Lamian was one of the highlights of my recent trip to Chicago. It was everything I wanted it to be and more and it was a destination experience.",
+  food: 4.3,
+  service: 4.0,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 5.0,
 })
 
 #la
-american = Restaurant.create({
-  name: "Wayfare Tavern",
-  street_address:"558 Sacramento St.",
-  city: "San Francisco",
+la_mexican = Restaurant.create({
+  name: "Yxta Cocina Mexicana",
+  street_address:"601 S. Central Ave",
+  city: "Los Angeles",
   state: "CA",
-  zip_code: "94111",
-  num_seats: 15,
-  cuisine: 0,
-  phone_number: "(415)772-9060",
+  zip_code: "90021",
+  num_seats: 10,
+  cuisine: 6,
+  phone_number: "(213) 596-5579",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
-  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
-  price: 4,
-  neighborhood: "Financial District/Embarcadero"
+  description: "The restaurant offers authentic Mexican food—handmade tortillas, fresh guacamole, slow-cooked carnitas, enchiladas de mole, as well as delicious updates to the classics—ceviche tostadas, dos gringas and salmon a la parilla.",
+  price: 2,
+  neighborhood: "Downtown"
+})
+
+la_mexican_review1 = Review.create({
+  author_id: user10.id,
+  restaurant_id: la_mexican.id,
+  body: "Meal was delicious and service was fast. I had the shrimp enchiladas and my coworker had the chile relleno and we shared guacamole. Guacamole is great, I love the crunchy pepitas. Love this place!",
+  food: 4.3,
+  service: 4.0,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 5.0,
 })
 
 #Miami
-american = Restaurant.create({
-  name: "Wayfare Tavern",
-  street_address:"558 Sacramento St.",
-  city: "San Francisco",
-  state: "CA",
-  zip_code: "94111",
-  num_seats: 15,
-  cuisine: 0,
-  phone_number: "(415)772-9060",
+miami_japanese = Restaurant.create({
+  name: "Pubbelly Sushi Aventura",
+  street_address:"19565 Biscayne Blvd",
+  city: "Aventure",
+  state: "FL",
+  zip_code: "33180",
+  num_seats: 10,
+  cuisine: 4,
+  phone_number: "(305) 690-7710",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
-  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
-  price: 4,
-  neighborhood: "Financial District/Embarcadero"
+  description: "Welcome to Pubbely Sushi, neighborhood sushi restaurant, where casual dining meets superb service, food and flavor.",
+  price: 3,
+  neighborhood: "Aventure"
+})
+
+miami_jap_review1 = Review.create({
+  author_id: user4.id,
+  restaurant_id: miami_japanese.id,
+  body: "Meal was delicious and service was fast. I had the shrimp enchiladas and my coworker had the chile relleno and we shared guacamole. Guacamole is great, I love the crunchy pepitas. Love this place!",
+  food: 4.3,
+  service: 4.0,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 5.0,
 })
 
 #las vegas
-american = Restaurant.create({
-  name: "Wayfare Tavern",
-  street_address:"558 Sacramento St.",
-  city: "San Francisco",
-  state: "CA",
-  zip_code: "94111",
-  num_seats: 15,
-  cuisine: 0,
-  phone_number: "(415)772-9060",
+las_vegas_vietnamese = Restaurant.create({
+  name: "Lemongrass - Aria",
+  street_address:"3730 Las Vegas Blvd South",
+  city: "Las Vegas",
+  state: "NV",
+  zip_code: "89109",
+  num_seats: 10,
+  cuisine: 9,
+  phone_number: "(702) 590-8670",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
-  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
-  price: 4,
-  neighborhood: "Financial District/Embarcadero"
+  description: "Serving a modern interpretation of Thai cuisine, Lemongrass offers a wide variety of authentic dishes filled with flavor. Our Satay Bar offers charcoal-grilled beef, poultry, pork and seafood skewers served with a variety of sauces and seasonings. Or enjoy inspired Asian cocktails at the expanded bar and lounge located near the entrance. The casual, modern atmosphere also offers two private dining rooms for a more exclusive experience.",
+  price: 3,
+  neighborhood: "Aria Hotel & Casino"
+})
+
+la_mexican_review1 = Review.create({
+  author_id: user10.id,
+  restaurant_id: la_mexican.id,
+  body: "Food was sub par except the dumplings, service made me feel like I was bothering them, but the decor of the restaurant was really good. We won't be back. Lots of other better options and we are locals in Vegas, so we try lots of places.",
+  food: 4.0,
+  service: 3.0,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 3.5,
 })
 
 

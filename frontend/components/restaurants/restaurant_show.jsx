@@ -24,7 +24,9 @@ class RestaurantShow extends React.Component {
 }
   handleFavorite(e) {
     e.preventDefault();
-    if (this.favorited() === undefined) {
+    if (this.state.session.currentUser === null){
+      return;
+    } else if (this.favorited() === undefined) {
       this.props.addFavorite(this.props.match.params.restaurantId);
     } else {
       this.props.deleteFavorite(this.props.match.params.restaurantId);
@@ -32,7 +34,7 @@ class RestaurantShow extends React.Component {
   }
 
   favorited(){
-    if (this.state.session.currentUser === null) {
+    if ((this.state.session.currentUser === null) || (this.props.currentUser === null)){
       return undefined;
     } else if (this.props.currentUser.favoriteRestaurants !== undefined) {
       const rest = parseInt(this.props.match.params.restaurantId);

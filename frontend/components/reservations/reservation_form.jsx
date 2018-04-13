@@ -8,6 +8,7 @@ class ReservationForm extends React.Component {
     super(props);
     this.state = this.props.location;
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
 
   componentWillUnmount() {
@@ -43,6 +44,11 @@ class ReservationForm extends React.Component {
     );
   }
 
+  handleClick(e){
+    e.preventDefault();
+    this.props.history.push(`/restaurants/${this.state.restaurant.id}`);
+  }
+
   render() {
     const styles={margin: '10px', lineHeight: 2 };
     const header = (<h1>You're Almost Done!</h1>);
@@ -57,7 +63,7 @@ class ReservationForm extends React.Component {
         <div className="confirm-res-details">
           <img className= "rest-image" src={this.state.restaurant.imgUrl}></img>
           <div className="res-confirm">
-            <h1>{this.state.restaurant.name}</h1>
+            <h1 onClick={this.handleClick}>{this.state.restaurant.name}</h1>
             <div className="details">
               <label>Guests
                 <div>{this.state.reservation.num_guests}</div>

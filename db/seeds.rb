@@ -632,7 +632,7 @@ la_mexican_review1 = Review.create({
 miami_japanese = Restaurant.create({
   name: "Pubbelly Sushi Aventura",
   street_address:"19565 Biscayne Blvd",
-  city: "Aventure",
+  city: "Miami",
   state: "FL",
   zip_code: "33180",
   num_seats: 10,
@@ -641,7 +641,7 @@ miami_japanese = Restaurant.create({
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
   description: "Welcome to Pubbely Sushi, neighborhood sushi restaurant, where casual dining meets superb service, food and flavor.",
   price: 3,
-  neighborhood: "Aventure"
+  neighborhood: "Aventura"
 })
 
 miami_jap_review1 = Review.create({

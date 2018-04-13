@@ -142,6 +142,10 @@
   border: 1px solid black;
 }
 
+.featured-areas th:hover {
+  cursor: pointer;
+}
+
 .featured-areas tr {
   height: 150px;
   text-align: center;
@@ -149,6 +153,10 @@
 
 .featured-areas td {
   border: 1px solid black;
+}
+
+.featured-areas td:hover {
+  cursor: pointer;
 }
 
 .nyc {

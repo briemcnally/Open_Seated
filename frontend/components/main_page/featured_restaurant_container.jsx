@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import MainPage from './main_page';
+import FeaturedRest from './featured_rest';
 import { requestRestaurants, searchRestaurants} from '../../actions/restaurant_actions';
 import { withRouter } from 'react-router-dom';
 
@@ -13,4 +13,4 @@ const mapDispatchToProps = (dispatch, ownProps) => ({
   searchRestaurants: searchTerm => dispatch(searchRestaurants(searchTerm))
 });
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(MainPage));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(FeaturedRest));

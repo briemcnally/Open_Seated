@@ -17,25 +17,33 @@ class MainPage extends React.Component {
         <div className="top-cuisine-header">
         <h1>Top Cuisines Near San Francisco</h1>
         </div>
-        <div>
-          <table className="featured-restaurants">
-            <tbody>
-            <tr>
-              <th className="best-mexican">
+
+        <div className="feat-rest-div">
+          <ul className="featured-restaurants">
+            <div className="rest-li">
+              <li className="best-mexican">
+                <div className="rest-li-text">
                 Best Mexican Restaurants Around You
-              </th>
-              <th className="best-italian">
+                </div>
+              </li>
+            </div>
+
+            <div className="rest-li">
+              <li className="best-italian">
                 Best Italian Restaurants Around You
-              </th>
-              <th className="best-japanese">
+              </li>
+            </div>
+              <div className="rest-li">
+              <li className="best-japanese">
                 Best Japanese Restaurants Around You
-              </th>
-              <th className="best-chinese">
+              </li>
+            </div>
+              <div className="rest-li">
+              <li className="best-chinese">
                 Best Chinese Restaurants Around You
-              </th>
-            </tr>
-          </tbody>
-          </table>
+              </li>
+            </div>
+            </ul>
         </div>
       </div>
 

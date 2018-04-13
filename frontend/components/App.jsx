@@ -16,7 +16,8 @@ import MainPage from './main_page/main_page';
 import RestaurantSearchContainer from './restaurants/restaurant_search_container';
 import ProfileContainer from './users/profile_container';
 import ReviewFormContainer from './restaurants/review_form_container';
-import ConfirmationContainer from './users/confirmation_container'
+import ConfirmationContainer from './users/confirmation_container';
+import FooterContainer from './footer/footer_container';
 
 const App = () => (
   <main className="main-container">
@@ -35,6 +36,7 @@ const App = () => (
       <Route exact path='/users/:userId' component={ProfileContainer} />
       <Route path="/" component={MainPage}/>
     </Switch>
+    <FooterContainer />
   </main>
 );
 

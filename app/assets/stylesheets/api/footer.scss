@@ -1,0 +1,37 @@
+.footer-spread {
+  width: 100%;
+  border: 1px solid #D3D3D3;
+  margin-top: 20px;
+  height: 60px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.left-footer-nav {
+  color: #da3743;
+  font-weight: bolder;
+  vertical-align: middle;
+  padding-top: 10px;
+  padding-left: 50px;
+}
+
+#icon{
+  font-size: 40px;
+}
+
+
+.right-footer-nav {
+  padding-right: 70px;
+  width: 120px;
+}
+
+.footer-links{
+  display: flex;
+  justify-content: space-between;
+}

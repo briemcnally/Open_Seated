@@ -125,9 +125,14 @@
 .favorite-button {
   border: 1px solid #d8d9db;
   padding: 10px 20px;
+  display: flex;
 }
 
-.favorite-button a{
+.favorite-button:hover{
+  cursor:pointer;
+}
+
+.favorite-button a {
     display: flex;
     justify-content: center;
 }

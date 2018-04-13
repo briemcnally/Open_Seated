@@ -136,3 +136,37 @@
     display: flex;
     justify-content: center;
 }
+
+.review-specifics{
+  margin-top: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.rating {
+  padding-right: 20px;
+  font-size: 18px;
+  border-right: 1px solid #d8d9db;
+}
+
+.center-rating {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #d8d9db;
+  font-size: 18px;
+}
+
+.end-rating {
+  padding-left: 20px;
+  padding-right: 20px;
+  border-right: 1px solid #d8d9db;font-size: 18px;
+}
+
+.rating-num {
+  font-weight: bolder;
+  padding-right: 5px;
+}
+
+.overall-rating{
+  display: flex;
+}

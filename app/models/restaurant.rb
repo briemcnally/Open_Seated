@@ -50,23 +50,23 @@ class Restaurant < ApplicationRecord
     source: :user
 
   def average_rating
-    reviews.average(:rating)
+    reviews.average(:rating).round(1)
   end
 
   def average_food_rating
-    reviews.average(:food)
+    reviews.average(:food).round(1)
   end
 
   def average_service_rating
-    reviews.average(:service)
+    reviews.average(:service).round(1)
   end
 
   def average_ambience_rating
-    reviews.average(:ambience)
+    reviews.average(:ambience).round(1)
   end
 
   def average_value_rating
-    reviews.average(:value)
+    reviews.average(:value).round(1)
   end
 
   def self.query(search_term)

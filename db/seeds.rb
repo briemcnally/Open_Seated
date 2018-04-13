@@ -16,9 +16,92 @@ guest = User.create({
   password: "guestdemo",
   email: "guest@guest.com",
   fname: "Guest",
-  lname: "Demo" })
+  lname: "Demo"
+})
 
-# enum (american, chinese, french, italian, japanese, meditterranea, mexican, seafood, vietnamese)
+admin = User.create({
+  username: "Admin",
+  password: "password",
+  email: "admin@admin.com",
+  fname: "Admin",
+  lname: "OpenSeated"
+  })
+
+user2 = User.create({
+  username: "G_Ramsay",
+  password: "password",
+  email: "ramsay@ramsay.com",
+  fname: "Gordon",
+  lname: "Ramsay",
+})
+
+user3 = User.create({
+  username: "J_Oliver",
+  password: "password",
+  email: "oliver@oliver.com",
+  fname: "Jamie",
+  lname: "Oliver",
+})
+
+user4 = User.create({
+  username: "A_Bourdain",
+  password: "password",
+  email: "bourdain@bordain.com",
+  fname: "Anthony",
+  lname: "Bourdain",
+})
+
+user5 = User.create({
+  username: "W_Puck",
+  password: "password",
+  email: "puck@puck.com",
+  fname: "Wolfgang",
+  lname: "Puck",
+})
+
+user6 = User.create({
+  username: "M_Batali",
+  password: "password",
+  email: "batali@batali.com",
+  fname: "Mario",
+  lname: "Batali",
+})
+
+user7 = User.create({
+  username: "B_Flay",
+  password: "password",
+  email: "flay@flay.com",
+  fname: "Bobby",
+  lname: "Flay",
+})
+
+user8 = User.create({
+  username: "R_Ray",
+  password: "password",
+  email: "ray@ray.com",
+  fname: "Rachel",
+  lname: "R_Ray",
+})
+
+user9 = User.create({
+  username: "P_Dean",
+  password: "password",
+  email: "dean@dean.com",
+  fname: "Paula",
+  lname: "Dean",
+})
+
+user10 = User.create({
+  username: "G_Fieri",
+  password: "password",
+  email: "fieri@fieri.com",
+  fname: "Guy",
+  lname: "Fieri",
+})
+
+
+
+# enum (american, chinese, french, japanese, japanese, meditterranea, mexican, seafood, vietnamese)
 american = Restaurant.create({
   name: "Wayfare Tavern",
   street_address:"558 Sacramento St.",
@@ -34,6 +117,40 @@ american = Restaurant.create({
   neighborhood: "Financial District/Embarcadero"
 })
 
+american_review1 = Review.create({
+  author_id: user7.id,
+  restaurant_id: american.id,
+  body: "We had Alex as our server. She was amazing as always. She's super attentive, friendly, and knowledgeable. We ordered the guac and tortillas ( the tortillas are amazingly soft) and tried the cheesy cauliflower which was out of this world. I love the desserts especially the cobbler and pairing it with the ginger mint tea is the perfect way to finish the evening.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
+})
+
+american_review2 = Review.create({
+  author_id: user2.id,
+  restaurant_id: american.id,
+  body: "When I walked in, I really wasn't expecting much. There were a lot of interesting decorations on the walls. The photos of the food were appetizing and palpable, but didn't live up to the hype. Some of my favorite dishes are no longer available. I felt the prices were too high given the quality of the food. Might be back. Time will tell.",
+  food: 4.0,
+  service: 4.0,
+  ambience: 4.2,
+  value: 2.0,
+  rating: 3.0,
+})
+
+american_review2 = Review.create({
+  author_id: user3.id,
+  restaurant_id: american.id,
+  body: "Decent place. The service was good for the most part but the waitress was a bit tired. I found the ambiance to be very charming. Everything I tried was bursting with flavor. Everything was just so yummy. I had to take one star away because the burger was a little undercooked.",
+  food: 3.0,
+  service: 3.0,
+  ambience: 5.0,
+  value: 4.0,
+  rating: 4.0,
+})
+
+
 chinese = Restaurant.create({
   name: "Mission Chinese",
   street_address: "2234 Mission St.",
@@ -47,6 +164,38 @@ chinese = Restaurant.create({
   description: "Trendy crowds line up for the imaginative Chinese eats at this casual, nationally known destination.",
   price: 2,
   neighborhood: "Mission"
+})
+
+chinese_review1 = Review.create({
+  author_id: user4.id,
+  restaurant_id: chinese.id,
+  body: "I had high hopes for this place. This place is very dumpy and in a serious need of a makeover. Too many things on the menu look like crap, smell like crap, and taste like crap. I felt the prices were too high given the quality of the food. I would be hard pressed to come back.",
+  food: 3.0,
+  service: 4.1,
+  ambience: 1.0,
+  value: 3.0,
+  rating: 2.0,
+})
+chinese_review2 = Review.create({
+  author_id: user5.id,
+  restaurant_id: chinese.id,
+  body: "I stumbled on this undiscovered gem right in our neighboorhood. There were a lot of interesting decorations on the walls. Everything was just so yummy. It could have been perfect, but the wait to get in was so long.",
+  food: 5.0,
+  service: 3.5,
+  ambience: 4.0,
+  value: 4.3,
+  rating: 4.0,
+})
+
+chinese_review3 = Review.create({
+  author_id: user6.id,
+  restaurant_id: chinese.id,
+  body: "I'm torn about this place. The service was good for the most part but the waitress was a bit rude. I felt the prices were too high given the quality of the food. The tofu dish tasted spongy and a bit bland. I had a satisfactory experience and will have to try it again.",
+  food: 4.0,
+  service: 3.1,
+  ambience: 3.0,
+  value: 4.2,
+  rating: 3.5,
 })
 
 french = Restaurant.create({
@@ -64,6 +213,38 @@ french = Restaurant.create({
   neighborhood: "Financial District/Embarcadero"
 })
 
+french_review1 = Review.create({
+  author_id: user7.id,
+  restaurant_id: french.id,
+  body: "I stumbled on this undiscovered gem right in our neighboorhood. After my meal, I was knocked into a food coma. Everything from the starters to the entrees to the desserts meshed perfectly with my flavor-profile. Easily earned their 5 stars!",
+  food: 5.0,
+  service: 4.1,
+  ambience: 4.0,
+  value: 3.5,
+  rating: 5.0,
+})
+french_review2 = Review.create({
+  author_id: user8.id,
+  restaurant_id: french.id,
+  body: "Bleh. The pork was overcooked. The menu didn't match the one on their website. There were bits of food stuck to my silverware. Meh.",
+  food: 3.0,
+  service: 3.5,
+  ambience: 3.0,
+  value: 4.0,
+  rating: 3.0,
+})
+
+french_review3 = Review.create({
+  author_id: user9.id,
+  restaurant_id: french.id,
+  body: "I'm torn about this place. The service was good for the most part but the waitress was a bit rude. I felt the prices were too high given the quality of the food. The tofu dish tasted spongy and a bit bland. I had a satisfactory experience and will have to try it again.",
+  food: 4.0,
+  service: 3.1,
+  ambience: 3.0,
+  value: 4.2,
+  rating: 3.5,
+})
+
 italian = Restaurant.create({
   name: "Tommaso's Ristorante Italiano",
   street_address: "1042 Kearny St.",
@@ -77,6 +258,39 @@ italian = Restaurant.create({
   description: "Family-run institution (since 1935) firing up thin-crust pizzas in its original wood-burning oven.",
   price: 2,
   neighborhood: "Financial District/Embarcadero"
+})
+
+italian_review1 = Review.create({
+  author_id: user10.id,
+  restaurant_id: italian.id,
+  body: "This place is awesome.   From the food to the service, awesome. Pizza is what is popular, but the calamari is honestly the best thing on the menu.  The wait is never that bad which is a plus.",
+  food: 5.0,
+  service: 4.1,
+  ambience: 4.0,
+  value: 3.5,
+  rating: 5.0,
+})
+
+italian_review2 = Review.create({
+  author_id: user4.id,
+  restaurant_id: italian.id,
+  body: "Historic spot from like 100 years ago serving some of the best italian food. Always crowded and popular but the friendly staff are usually still quick about getting you in.",
+  food: 4.0,
+  service: 4.5,
+  ambience: 4.0,
+  value: 5.0,
+  rating: 4.0,
+})
+
+italian_review3 = Review.create({
+  author_id: user2.id,
+  restaurant_id: italian.id,
+  body: "Linguine seafood was ok, didn't seem so fresh and the red sauce didn't taste like fresh tomato sauce so what was I eating?",
+  food: 2.0,
+  service: 3.1,
+  ambience: 3.0,
+  value: 3.2,
+  rating: 2.5,
 })
 
 japanese = Restaurant.create({
@@ -94,6 +308,39 @@ japanese = Restaurant.create({
   neighborhood: "North Beach/Telegraph Hill"
 })
 
+japanese_review1 = Review.create({
+  author_id: user3.id,
+  restaurant_id: japanese.id,
+  body: "Classic elegant omakase-only restaurant. Chefs are japense and the ambiance is elegant and high end. They sport a Michelin Star for a reason.",
+  food: 5.0,
+  service: 5.1,
+  ambience: 4.0,
+  value: 5.0,
+  rating: 5.0,
+})
+
+japanese_review2 = Review.create({
+  author_id: user4.id,
+  restaurant_id: japanese.id,
+  body: "I was not impressed. I much MUCH prefer Kusakabe over Omakase.",
+  food: 3.0,
+  service: 4.5,
+  ambience: 4.0,
+  value: 4.0,
+  rating: 3.0,
+})
+
+japanese_review3 = Review.create({
+  author_id: user5.id,
+  restaurant_id: japanese.id,
+  body: "Great omakase experience in SF. Food was super fresh and each course was full of different flavors.",
+  food: 4.0,
+  service: 5.0,
+  ambience: 4.0,
+  value: 4.0,
+  rating: 4.0,
+})
+
 mediterranean = Restaurant.create({
   name: "La Mediterranee",
   street_address: "2210 Fillmore St.",
@@ -107,6 +354,39 @@ mediterranean = Restaurant.create({
   description: "Middle Eastern-Mediterranean spot pairing meze platters & prime people-watching via sidewalk seats.",
   price: 2,
   neighborhood: "Fillmore"
+  })
+
+mediterranean_review1 = Review.create({
+  author_id: user6.id,
+  restaurant_id: mediterranean.id,
+  body: "I love Mediterranean food and was excited to try this place, but in the end everything was just...okay.",
+  food: 3.0,
+  service: 4.0,
+  ambience: 4.0,
+  value: 4.0,
+  rating: 3.0,
+})
+
+mediterranean_review2 = Review.create({
+  author_id: user7.id,
+  restaurant_id: mediterranean.id,
+  body: "Cutest, most quaint restaurant on Fillmore. Not insanely overpriced like everything else in SF, but twice as delicious! Great service and incredible food! A must-visit if you are in the area!!",
+  food: 5.0,
+  service: 4.5,
+  ambience: 5.0,
+  value: 4.0,
+  rating: 5.0,
+})
+
+mediterranean_review3 = Review.create({
+  author_id: user8.id,
+  restaurant_id: mediterranean.id,
+  body: "This place has been one of the best Greek spots I've been to, outside of Greece! The food is delicious, not overly done and filling--for your soul and stomach.",
+  food: 5.0,
+  service: 5.0,
+  ambience: 5.0,
+  value: 5.0,
+  rating: 5.0,
 })
 
 mexican = Restaurant.create({
@@ -125,9 +405,31 @@ mexican = Restaurant.create({
 })
 
 mexican_review1 = Review.create({
-  author_id: guest.id,
+  author_id: user9.id,
   restaurant_id: mexican.id,
   body: "We had Alex as our server. She was amazing as always. She's super attentive, friendly, and knowledgeable. We ordered the guac and tortillas ( the tortillas are amazingly soft) and tried the cheesy cauliflower which was out of this world. I love the desserts especially the cobbler and pairing it with the ginger mint tea is the perfect way to finish the evening.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
+})
+
+mexican_review2 = Review.create({
+  author_id: user10.id,
+  restaurant_id: mexican.id,
+  body: "Unfortunately the service was so bad, I prolonged the agony by holding out for the food.",
+  food: 3.0,
+  service: 2.0,
+  ambience: 4.0,
+  value: 4.0,
+  rating: 2.0,
+})
+
+mexican_review3 = Review.create({
+  author_id: user7.id,
+  restaurant_id: mexican.id,
+  body: " was a little skeptical of a vegan Mexican restaurant but the food was much better than I expected!",
   food: 4.5,
   service: 4.1,
   ambience: 4.2,
@@ -150,6 +452,39 @@ seafood = Restaurant.create({
   neighborhood: "Castro"
 })
 
+seafood_review1 = Review.create({
+  author_id: user2.id,
+  restaurant_id: seafood.id,
+  body: "So hard to get a seat. Thanks to OpenSeated was finally able to go to this restaurant. The Cioppini is incredible!",
+  food: 5.0,
+  service: 5.0,
+  ambience: 5.0,
+  value: 5.0,
+  rating: 5.0,
+})
+
+seafood_review2 = Review.create({
+  author_id: user3.id,
+  restaurant_id: seafood.id,
+  body: "Awesome find... small, quaint, clean.  Food was OUTSTANDING!  Super nice and welcoming staff.  So glad we found this non-touristy, local joint.",
+  food: 4.0,
+  service: 4.0,
+  ambience: 4.0,
+  value: 4.0,
+  rating: 4.0,
+})
+
+seafood_review3 = Review.create({
+  author_id: user4.id,
+  restaurant_id: seafood.id,
+  body: "Really cute and small restaurant in the Castro.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
+})
+
 vietnamese = Restaurant.create({
   name: "Yummy Yummy",
   street_address:"1015 Irving St.",
@@ -165,7 +500,132 @@ vietnamese = Restaurant.create({
   neighborhood: "Inner Sunset"
 })
 
-user1_fav = Favorite.create ({
+vietnamese_review1 = Review.create({
+  author_id: user5.id,
+  restaurant_id: vietnamese.id,
+  body: "Better than you think. Order what they tell you. Best shrimp noodle soup and chicken broccoli ever!",
+  food: 5.0,
+  service: 4.0,
+  ambience: 3.0,
+  value: 4.0,
+  rating: 4.0,
+})
+
+vietnamese_review2 = Review.create({
+  author_id: user6.id,
+  restaurant_id: vietnamese.id,
+  body: "Yummy Yummy is well Yummy!  This place has some of the best sliced fish porridge (or also known as Congee).",
+  food: 4.0,
+  service: 4.0,
+  ambience: 4.0,
+  value: 4.0,
+  rating: 5.0,
+})
+
+vietnamese_review3 = Review.create({
+  author_id: user7.id,
+  restaurant_id: vietnamese.id,
+  body: "I didn't much enjoy the sticky rice, and the sui mai was just ok. I thought the rice roll was pretty decent though. It wasn't super flavorful but I didn't mind adding soy sauce to my own salty preference levels.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
+})
+
+# new york city rest
+nyc_american = Restaurant.create({
+  name: "Balthazar",
+  street_address:"80 Spring St.",
+  city: "New York",
+  state: "NY",
+  zip_code: "10012",
+  num_seats: 10,
+  cuisine: 2,
+  phone_number: "(415)772-9060",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "Balthazar is a traditional French Brasserie with a bustling railway station atmosphere. Our kitchen serves a variety of meat and poultry dishes including: Duck Shepherds Pie, Roasted Chicken and Steak Frites. Balthazar specializes in seafood with an array of fish entrees and a complete raw oyster and shellfish bar.",
+  price: 3,
+  neighborhood: "SoHo"
+})
+
+nyc_american_review1 = Review.create({
+  author_id: user5.id,
+  restaurant_id: nyc_american.id,
+  body: "We had Alex as our server. She was amazing as always. She's super attentive, friendly, and knowledgeable. We ordered the guac and tortillas ( the tortillas are amazingly soft) and tried the cheesy cauliflower which was out of this world. I love the desserts especially the cobbler and pairing it with the ginger mint tea is the perfect way to finish the evening.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
+})
+
+#chicago
+american = Restaurant.create({
+  name: "Wayfare Tavern",
+  street_address:"558 Sacramento St.",
+  city: "San Francisco",
+  state: "CA",
+  zip_code: "94111",
+  num_seats: 15,
+  cuisine: 0,
+  phone_number: "(415)772-9060",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
+  price: 4,
+  neighborhood: "Financial District/Embarcadero"
+})
+
+#la
+american = Restaurant.create({
+  name: "Wayfare Tavern",
+  street_address:"558 Sacramento St.",
+  city: "San Francisco",
+  state: "CA",
+  zip_code: "94111",
+  num_seats: 15,
+  cuisine: 0,
+  phone_number: "(415)772-9060",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
+  price: 4,
+  neighborhood: "Financial District/Embarcadero"
+})
+
+#Miami
+american = Restaurant.create({
+  name: "Wayfare Tavern",
+  street_address:"558 Sacramento St.",
+  city: "San Francisco",
+  state: "CA",
+  zip_code: "94111",
+  num_seats: 15,
+  cuisine: 0,
+  phone_number: "(415)772-9060",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
+  price: 4,
+  neighborhood: "Financial District/Embarcadero"
+})
+
+#las vegas
+american = Restaurant.create({
+  name: "Wayfare Tavern",
+  street_address:"558 Sacramento St.",
+  city: "San Francisco",
+  state: "CA",
+  zip_code: "94111",
+  num_seats: 15,
+  cuisine: 0,
+  phone_number: "(415)772-9060",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "At Wayfare, we follow a simple rule: Make interesting and delicious food in-house, using only the freshest ingredients. All of our sandwiches, salads, entrées, soups, cocktails and bar fare demonstrate our goal to make cuisine that both satisfies and inspires. \n Popular upscale eatery serving Tyler Florence's American fare in a British pub-style setting.",
+  price: 4,
+  neighborhood: "Financial District/Embarcadero"
+})
+
+
+fav = Favorite.create ({
   user_id: guest.id,
   restaurant_id: mexican.id
 })

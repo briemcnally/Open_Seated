@@ -10,7 +10,7 @@ class Footer extends React.Component {
         <div className="footer-nav">
 
           <div className="left-footer-nav">
-            <h1>OpenSeated<i class="far fa-copyright"></i></h1>
+            <h1>OpenSeated<i className="far fa-copyright"></i></h1>
           </div>
 
           <div className="right-footer-nav">

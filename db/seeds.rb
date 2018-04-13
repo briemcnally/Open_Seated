@@ -572,8 +572,23 @@ chinese_chicago = Restaurant.create({
   phone_number: "(312) 595-9440",
   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
   description: "Welcome to Imperial Lamian, we feature the traditional art of authentic Chinese cuisine in a sophisticated environment. Master Chefs prepare your meals using ancient techniques of noodle making, dumpling folding and wok cooking. Complimented by our unique beverage program - custom blended teas, a comprehensive beverage selection that includes wine, sake, craft beer, Asian whiskey, single malts and specialty cocktails. Open for Lunch, Dinner and Brunch.",
-  neighborhood: "River North"
+  price: 3,
+  neighborhood: "River North",
 })
+#
+# chinese_chicago = Restaurant.create ({
+#   name: "Imperial Lamian",
+#   street_address: "6 W Hubbard St.",
+#   city: "Chicago",
+#   state: "IL",
+#   zip_code: "60654",
+#   num_seats: 10,
+#   cuisine: 1,
+#   phone_number: "(312) 595-9440",
+#   img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+#   description: "
+#   neighborhood: "River North"
+# })
 
 chicago_chinese_review1 = Review.create({
   author_id: user8.id,

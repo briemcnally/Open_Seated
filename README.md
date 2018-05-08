@@ -43,7 +43,9 @@ Logged in users are able to access the review form. Diners can rate the restaura
 ![alt-text](https://i.imgur.com/3RGGON9.gif)
 
 #Favoriting Restaurants
-Logged in users can also toggle a favorite button to add restaurants to their list of favorites. Favorite restaurant_ids are stored to users slice of state. comparing the match params to the user's favorite restaurants we can toggle the button. Functionality does not worked for users who are not logged in. 
+Logged in users can also toggle a favorite button to add restaurants to their list of favorites. Favorite restaurant_ids are stored to users slice of state. comparing the match params to the user's favorite restaurants we can toggle the button. Functionality does not worked for users who are not logged in.
+
+![alt-text](https://i.imgur.com/ZQ6TW8A.gif)
 
 
 ````
@@ -51,7 +53,9 @@ restaurant_show.jsx
 
 handleFavorite(e) {
   e.preventDefault();
-  if (this.favorited() === undefined) {
+  if (this.state.session.currentUser === null){
+    return;
+  } else if (this.favorited() === undefined) {
     this.props.addFavorite(this.props.match.params.restaurantId);
   } else {
     this.props.deleteFavorite(this.props.match.params.restaurantId);
@@ -59,7 +63,7 @@ handleFavorite(e) {
 }
 
 favorited(){
-  if (this.state.session.currentUser === null) {
+  if ((this.state.session.currentUser === null) || (this.props.currentUser === null)){
     return undefined;
   } else if (this.props.currentUser.favoriteRestaurants !== undefined) {
     const rest = parseInt(this.props.match.params.restaurantId);
@@ -70,10 +74,12 @@ favorited(){
   } else {
     return undefined;
   }
+}
 
 ````
 
 ## Technologies
+The platform was developed using Ruby on Rails, PostgreSQL, React.js, and Redux. This project was designed and built in a ten day time period.
 
 #### Additional Resources
 * [Wireframes](https://github.com/briemcnally/open-seated/wiki/wireframes)

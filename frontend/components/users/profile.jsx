@@ -4,14 +4,24 @@ class Profile extends React.Component {
   constructor(props) {
     super(props);
     this.state = this.props;
+    const currentUser = this.state.currentUser.id;
+    debugger
   }
 
 
   render() {
     return (
       <div>
-        <div>
+        <div className="user-title">
           <h1>{this.state.currentUser.fname + " " + this.state.currentUser.lname}</h1>
+        </div>
+        <div className="reservation-list">
+          <h1>Reservations</h1>
+          <div>
+            <ul>
+              <h2>{this.state.reservation}</h2>
+            </ul>
+          </div>
         </div>
       </div>
     );

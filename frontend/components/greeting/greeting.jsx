@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const personalGreeting = (currentUser, logout) => (
   <div className="right-nav">
     <div className="greeting-nav">
-      <h1 className="greeting">Hi, {currentUser.fname}</h1>
+      <Link to="users/:userId"><h1 className="greeting">Hi, {currentUser.fname}</h1></Link>
       <button onClick={logout}> Logout</button>
     </div>
   </div>

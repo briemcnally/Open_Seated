@@ -1,3 +1,26 @@
 // Place all the styles related to the Api::Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user-title {
+  border-bottom: 1px solid #D3D3D3;
+  margin-bottom: 30px;
+}
+
+.user-title h1{
+  padding: 20px;
+  width: 100%;
+  font-size: 30px;
+}
+
+.reservation-list{
+  display: block;
+  padding: 40px;
+  // border: 1px solid black;
+  box-shadow: 0 2px 8px rgba(153, 154, 153, .4);
+  margin: 50px;
+}
+
+.reservation-list h1 {
+  font-size: 24px;
+  border-bottom: 1px solid #D3D3D3;
+}

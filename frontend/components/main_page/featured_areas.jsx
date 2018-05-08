@@ -56,7 +56,7 @@ class FeaturedAreas extends React.Component {
     return (
       <div className="featured-areas-box">
         <div className="featured-areas-header">
-        <h1>Features Areas</h1>
+        <h1>Featured Areas</h1>
         </div>
         <div>
           <table className="featured-areas">

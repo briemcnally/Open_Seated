@@ -139,7 +139,6 @@
 
 .featured-areas th {
   width: 33.3%;
-  border: 1px solid black;
 }
 
 .featured-areas th:hover {
@@ -217,9 +216,17 @@
   border: 1px solid #d8d9db;
 }
 
+.best-mexican:hover{
+  cursor: pointer;
+}
+
 .best-italian {
   background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,o_60,w_130/v1522968951/15862329469_78f002d81e_m.jpg);
   background-repeat: no-repeat;
+}
+
+.best-italian:hover {
+  cursor: pointer;
 }
 
 .best-japanese {
@@ -227,9 +234,17 @@
   background-repeat: no-repeat;
 }
 
+.best-japanese:hover{
+  cursor: pointer;
+}
+
 .best-chinese {
   background-image: url(http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,o_60,w_130/v1522967620/pexels-photo-955137.jpg);
   background-repeat: no-repeat;
+}
+
+.best-chinese:hover{
+  cursor: pointer;
 }
 
 .featured-restaurants {
@@ -248,6 +263,7 @@
   border-radius: 3px;
   color: white;
   font-weight: bolder;
+  padding-top: 20%;
 }
 
 .featured-restaurants tr{
@@ -270,5 +286,11 @@
 .rest-li-text{
   font-weight: bolder;
   font-size: 22px;
-  color: black;
+  color: white;
+  text-shadow: 3px 3px 4px #000000;
+}
+
+
+.center {
+  width: 100%
 }

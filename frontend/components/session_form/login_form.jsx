@@ -82,8 +82,8 @@ class LoginForm extends React.Component {
               </h2>
 
               <h2 className="redirect-new-user">
-                Want to test out our site?
-                <button onClick={this.handleDemo}> Demo Login </button>
+                Want to test out our site?  
+                <button onClick={this.handleDemo}> Demo Login</button>
               </h2>
             </fieldset>
           </form>

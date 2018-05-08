@@ -20,22 +20,24 @@ import ConfirmationContainer from './users/confirmation_container';
 import FooterContainer from './footer/footer_container';
 
 const App = () => (
-  <main className="main-container">
+  <main className="nav">
     <GreetingContainer />
-    <Switch>
-      <AuthRoute exact path="/signup" component={SignupFormContainer} />
-      <AuthRoute exact path="/login" component={LoginFormContainer} />
-      <ProtectedRoute exact path="/reservations/confirmation" component={ConfirmationContainer} />
-      <ProtectedRoute exact path="/restaurants/new" component={CreateRestaurantFormContainer} />
-      <Route exact path="/restaurants/search" component={RestaurantSearchContainer} />
-      <ProtectedRoute exact path ="/restaurants/:restaurantId/review/new" component={ReviewFormContainer}/>
-      <ProtectedRoute exact path="/restaurants/:restaurantId/reservation/new" component={ReservationFormContainer} />
-      <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
-      <Route exact path="/restaurants" component={RestaurantIndexContainer} />
-      <Route exact path="/reservations" component={ReservationSearchContainer}/>
-      <Route exact path='/users/:userId' component={ProfileContainer} />
-      <Route path="/" component={MainPage}/>
-    </Switch>
+    <main className="main-container">
+      <Switch>
+        <AuthRoute exact path="/signup" component={SignupFormContainer} />
+        <AuthRoute exact path="/login" component={LoginFormContainer} />
+        <ProtectedRoute exact path="/reservations/confirmation" component={ConfirmationContainer} />
+        <ProtectedRoute exact path="/restaurants/new" component={CreateRestaurantFormContainer} />
+        <Route exact path="/restaurants/search" component={RestaurantSearchContainer} />
+        <ProtectedRoute exact path ="/restaurants/:restaurantId/review/new" component={ReviewFormContainer}/>
+        <ProtectedRoute exact path="/restaurants/:restaurantId/reservation/new" component={ReservationFormContainer} />
+        <Route exact path="/restaurants/:restaurantId" component={RestaurantShowContainer} />
+        <Route exact path="/restaurants" component={RestaurantIndexContainer} />
+        <Route exact path="/reservations" component={ReservationSearchContainer}/>
+        <Route exact path='/users/:userId' component={ProfileContainer} />
+        <Route path="/" component={MainPage}/>
+      </Switch>
+    </main>
     <FooterContainer />
   </main>
 );

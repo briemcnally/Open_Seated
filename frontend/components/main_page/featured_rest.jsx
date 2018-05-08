@@ -47,30 +47,30 @@ class FeaturedRest extends React.Component {
       <div className="feat-rest-div">
         <ul className="featured-restaurants">
           <div className="rest-li">
-            <li className="best-mexican">
-              <div className="rest-li-text" onClick={this.handleMexClick}>
+            <li className="best-mexican" onClick={this.handleMexClick}>
+              <div className="rest-li-text">
                   Best Mexican Restaurants Around You
               </div>
             </li>
           </div>
 
           <div className="rest-li">
-            <li className="best-italian">
-              <div className="rest-li-text" onClick={this.handleItalianClick}>
+            <li className="best-italian" onClick={this.handleItalianClick}>
+              <div className="rest-li-text">
                 Best Italian Restaurants Around You
               </div>
             </li>
           </div>
             <div className="rest-li">
-            <li className="best-japanese">
-              <div className="rest-li-text" onClick={this.handleJapaneseClick}>
+            <li className="best-japanese"onClick={this.handleJapaneseClick}>
+              <div className="rest-li-text">
               Best Japanese Restaurants Around You
             </div>
             </li>
           </div>
             <div className="rest-li">
-            <li className="best-chinese">
-              <div className="rest-li-text" onClick={this.handleChineseClick}>
+            <li className="best-chinese" onClick={this.handleChineseClick}>
+              <div className="rest-li-text">
               Best Chinese Restaurants Around You
             </div>
             </li>

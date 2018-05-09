@@ -35,3 +35,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+svg:not(:root).svg-inline--fa {
+    overflow: visible;
+    color: #da3743;
+}

@@ -1205,6 +1205,111 @@ nyc_american_review1 = Review.create({
   rating: 4.4,
 })
 
+nyc_american2 = Restaurant.create({
+  name: "Quality Meats",
+  street_address: "57 West 58th St.",
+  city: "New York",
+  state: "NY",
+  zip_code: "10019",
+  num_seats: 10,
+  cuisine: 2,
+  phone_number: "(212) 371-7777",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,w_130/v1527031797/24438793.jpg",
+  description: "Quality Meats is a contemporary restaurant that serves a rustic New American menu. The varied menu focuses on modern interpretations of classic dishes such as Traditional Steak Tartare, Caesar Salad and Roasted Bone Marrow, in addition to several cuts of beef from legendary New York butchers Milton Abeles and Strassburger Meats. The restaurant's side dishes alone merit a trip with innovative house specialties, including Corn Crème Brulee, Gnocchi and Cheese and Edamame with Mint Salt. The Quality Meats chefs are Craig Koketsu (Lespinasse, Stars) as executive chef and Cory Colton (Lespinasse, St.Regis) on pastry. The restaurant has a warm industrial atmosphere, created by award-winning AvroKO and features intimate dining areas, a comfortable bar area with well-stocked charcuterie bar.",
+  price: 4,
+  neighborhood: "Midtown West"
+})
+
+nyc_american2_review1 = Review.create({
+  author_id: user7.id,
+  restaurant_id: nyc_american2.id,
+  body: "We were so impressed with our experience at Quality Meats! The staff from the beginning was very friendly.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
+})
+
+nyc_american3 = Restaurant.create({
+  name: "Cookshop",
+  street_address: "156 10th Ave",
+  city: "New York",
+  state: "NY",
+  zip_code: "10011",
+  num_seats: 10,
+  cuisine: 2,
+  phone_number: "(212) 924-4440",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,w_130/v1527032435/thumb_600.jpg",
+  description: "Cookshop presents the ideal combination of great American food, prepared by Chef Marc Meyer, warm hospitality and meaningful design to west Chelsea. At the heart and soul of Cookshop lies the owners’ commitment to bringing an honest seasonal dining option to New York City coupled with an exceptional beverage program.",
+  price: 3,
+  neighborhood: "Chelsea"
+})
+
+nyc_american3_review1 = Review.create({
+  author_id: user7.id,
+  restaurant_id: nyc_american3.id,
+  body: "Cookshop presents the ideal combination of great American food, prepared by Chef Marc Meyer, warm hospitality and meaningful design to west Chelsea. At the heart and soul of Cookshop lies the owners’ commitment to bringing an honest seasonal dining option to New York City coupled with an exceptional beverage program.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 3.0,
+  value: 4.2,
+  rating: 4.4,
+})
+
+nyc_american4 = Restaurant.create({
+  name: "ABC Cocina",
+  street_address:"38 East 19th St",
+  city: "New York",
+  state: "NY",
+  zip_code: "10003",
+  num_seats: 10,
+  cuisine: 2,
+  phone_number: "(212) 677-2233",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1527032506/christmas-cutlery-dinner-6305.jpg",
+  description: "ABC Cocina with Jean-Georges, Phil Suarez and ABC Carpet & Home.",
+  price: 3,
+  neighborhood: "Union Square"
+})
+
+nyc_american4_review1 = Review.create({
+  author_id: user7.id,
+  restaurant_id: nyc_american4.id,
+  body: "We were so impressed with our experience at Quality Meats! The staff from the beginning was very friendly.",
+  food: 4.5,
+  service: 4.1,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
+})
+
+nyc_american5 = Restaurant.create({
+  name: "The Standard Grill",
+  street_address:"848 Washington St.",
+  city: "New York",
+  state: "NY",
+  zip_code: "10014",
+  num_seats: 10,
+  cuisine: 2,
+  phone_number: "(212) 645-4100",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "A neighborhood staple, The Standard Grill is classic New York meets new American cuisine. The front café, bar and street-side bistro is clean and bright with white oak and tile décor and features fresh oysters, specialty cocktails and charcuterie. The main dining room is cozy, old-world with red leather banquets, barrel vaulted ceilings, and a floor paved in copper pennies. The Standard Grill utilizes the freshest local ingredients, blending traditional steak house with new American grill sensibilities.",
+  price: 3,
+  neighborhood: "Meatpacking District"
+})
+
+nyc_american5_review1 = Review.create({
+  author_id: user7.id,
+  restaurant_id: nyc_american5.id,
+  body: "Great Service and drinks. The food was super, although not convinced the Lamb Bacon in the BLT works... just good old Pork would have been much better!!! Chef please change!!",
+  food: 4.5,
+  service: 3.0,
+  ambience: 4.2,
+  value: 4.2,
+  rating: 4.4,
+})
+
+
 #chicago
 chinese_chicago = Restaurant.create({
   name: "Imperial Lamian",

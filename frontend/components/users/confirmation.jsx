@@ -10,7 +10,7 @@ class Confirmation extends React.Component {
     return (
       <div>
         <div className="successful-booking">
-          <h1>You're reservation was successfully booked!</h1>
+          <h1>Your reservation was successfully booked!</h1>
         </div>
       </div>
     );

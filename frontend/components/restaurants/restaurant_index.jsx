@@ -26,7 +26,6 @@ class RestaurantIndex extends React.Component {
       </div>
     );
   }
-
 }
 
 export default RestaurantIndex;

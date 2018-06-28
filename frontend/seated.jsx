@@ -7,7 +7,7 @@ import { fetchRestaurant, fetchRestaurants, createRestaurant }
         from './actions/restaurant_actions';
 import { createReservation, fetchReservations } from './actions/reservations_actions';
 
-document.addEventListener('DOMContentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };

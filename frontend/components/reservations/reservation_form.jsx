@@ -17,7 +17,6 @@ class ReservationForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     const newReservation = {restaurant_id: this.state.restaurant.id,
                           date: this.state.reservation.date,
                           time: this.state.reservation.time,

@@ -3,9 +3,9 @@ import React from 'react';
 class Profile extends React.Component {
   constructor(props) {
     super(props);
+    debugger
     this.state = this.props;
     const currentUser = this.state.currentUser.id;
-    debugger
   }
 
 
@@ -19,7 +19,7 @@ class Profile extends React.Component {
           <h1>Reservations</h1>
           <div>
             <ul>
-              <h2>{this.state.reservation}</h2>
+              // <h2>{this.state.currentUser.reservations}</h2>
             </ul>
           </div>
         </div>

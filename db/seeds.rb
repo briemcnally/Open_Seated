@@ -19,6 +19,7 @@ guest = User.create({
   lname: "Demo"
 })
 
+
 admin = User.create({
   username: "Admin",
   password: "password",
@@ -116,6 +117,15 @@ american = Restaurant.create({
   price: 4,
   neighborhood: "Financial District/Embarcadero"
 })
+
+guest_res = Reservation.create({
+  user_id: guest.id,
+  restaurant_id: american.id,
+  date: "Thu, 28 Jun 2018 13:29:32 -0700",
+  time: "Thu, 28 Jun 2018 13:29:32 -0700",
+  num_guests: 2,
+  phone_number: "732-977-5356",
+  })
 
 american_review1 = Review.create({
   author_id: user7.id,

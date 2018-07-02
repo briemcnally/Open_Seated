@@ -1348,6 +1348,130 @@ chicago_chinese_review1 = Review.create({
   rating: 5.0,
 })
 
+chicago2 = Restaurant.create({
+  name: "FIG & OLIVE Chicago",
+  street_address:"104 East Oak St.",
+  city: "Chicago",
+  state: "IL",
+  zip_code: "60611",
+  num_seats: 10,
+  cuisine: 5,
+  phone_number: "(312) 445-0060",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "FIG & OLIVE extends an olive branch to Chicago with its flagship city location, situated on Oak Street in the premier Gold Coast luxury retail shopping district. An urban space embodying the origins from the South of France, and the 10,000 square foot dining destination features a variety of unique spaces that capture this essence of the French Riviera. With natural limestone and white stucco walls surrounding an open-exhibition kitchen, an expansive lounge and bar, and an open-air garden terrace, this location is perfect for an informal or elegant gathering.",
+  price: 3,
+  neighborhood: "Gold Coast / Streeterville",
+})
+
+chicago2_review1 = Review.create({
+  author_id: user5.id,
+  restaurant_id: chicago2.id,
+  body: "Service was neglectful and not at all friendly. All the food needed a bit more seasoning. Ambience is relaxed and trendy.",
+  food: 3.0,
+  service: 3.0,
+  ambience: 4.0,
+  value: 3.0,
+  rating: 3.0,
+})
+
+chicago3 = Restaurant.create({
+  name: "Mercadito - River North",
+  street_address:"108 W. Kinzie",
+  city: "Chicago",
+  state: "IL",
+  zip_code: "60610",
+  num_seats: 10,
+  cuisine: 6,
+  phone_number: "(312) 329-9555",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "We are the city’s top Mexican restaurant for authentic cuisine, specialty tequila and mezcal cocktails, located in the heart of River North. Our culinary team led by world-renowned Chef Patricio Sandoval features popular Mexican dishes, including our signature tacos, as well as fresh salsa and guacamole, ceviche, elote, mexicano, our killer Lobster Mac and Cheese and more.",
+  price: 2,
+  neighborhood: "River North",
+})
+
+chicago3_review1 = Review.create({
+  author_id: user5.id,
+  restaurant_id: chicago3.id,
+  body: "It was a Fantastic experience! The food was moderately priced and very delicious. The drinks were great too! I was impressed by the service on such a busy night- our waitress continuously checked on us and we were serviced very quickly. Great place to eat.",
+  food: 5.0,
+  service: 5.0,
+  ambience: 5.0,
+  value: 5.0,
+  rating: 5.0,
+})
+
+chicago4 = Restaurant.create({
+  name: "Nico Osteria",
+  street_address:"1015 N Rush St.",
+  city: "Chicago",
+  state: "IL",
+  zip_code: "60611",
+  num_seats: 10,
+  cuisine: 3,
+  phone_number: "(312) 994-7100",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "Salone Nico is a welcoming space, celebrating the European tradition of afternoon aperitifs and craft cocktails. The wine list features producers from Italy and Greece, as well as grower champagne. Grab a cocktail, sneak in a light bite or settle in for a night cap at Salone Nico.",
+  price: 3,
+  neighborhood: "River North",
+})
+
+chicago4_review1 = Review.create({
+  author_id: user5.id,
+  restaurant_id: chicago4.id,
+  body: "The space is very handsome with tons of nature light. We went for lunch and it wasn’t very busy. Our wait staff seemed a bit off while we had to wait for an extended time for ice tea and even longer for a cocktail. Our food was for the most part delicious- the comp bread platter and olive oil is worth the trip.",
+  food: 4.0,
+  service: 3.0,
+  ambience: 4.0,
+  value: 4.0,
+  rating: 4.0,
+})
+
+chinese_chicago = Restaurant.create({
+  name: "Imperial Lamian",
+  street_address:"6 W Hubbard St.",
+  city: "Chicago",
+  state: "IL",
+  zip_code: "60654",
+  num_seats: 10,
+  cuisine: 1,
+  phone_number: "(312) 595-9440",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "Welcome to Imperial Lamian, we feature the traditional art of authentic Chinese cuisine in a sophisticated environment. Master Chefs prepare your meals using ancient techniques of noodle making, dumpling folding and wok cooking. Complimented by our unique beverage program - custom blended teas, a comprehensive beverage selection that includes wine, sake, craft beer, Asian whiskey, single malts and specialty cocktails. Open for Lunch, Dinner and Brunch.",
+  price: 3,
+  neighborhood: "River North",
+})
+
+chinese_chicago = Restaurant.create({
+  name: "Imperial Lamian",
+  street_address:"6 W Hubbard St.",
+  city: "Chicago",
+  state: "IL",
+  zip_code: "60654",
+  num_seats: 10,
+  cuisine: 1,
+  phone_number: "(312) 595-9440",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "Welcome to Imperial Lamian, we feature the traditional art of authentic Chinese cuisine in a sophisticated environment. Master Chefs prepare your meals using ancient techniques of noodle making, dumpling folding and wok cooking. Complimented by our unique beverage program - custom blended teas, a comprehensive beverage selection that includes wine, sake, craft beer, Asian whiskey, single malts and specialty cocktails. Open for Lunch, Dinner and Brunch.",
+  price: 3,
+  neighborhood: "River North",
+})
+
+chinese_chicago = Restaurant.create({
+  name: "Imperial Lamian",
+  street_address:"6 W Hubbard St.",
+  city: "Chicago",
+  state: "IL",
+  zip_code: "60654",
+  num_seats: 10,
+  cuisine: 1,
+  phone_number: "(312) 595-9440",
+  img_url: "http://res.cloudinary.com/dzmnmgun1/image/upload/c_thumb,h_130,w_130/v1523056835/menu-restaurant-vintage-table.jpg",
+  description: "Welcome to Imperial Lamian, we feature the traditional art of authentic Chinese cuisine in a sophisticated environment. Master Chefs prepare your meals using ancient techniques of noodle making, dumpling folding and wok cooking. Complimented by our unique beverage program - custom blended teas, a comprehensive beverage selection that includes wine, sake, craft beer, Asian whiskey, single malts and specialty cocktails. Open for Lunch, Dinner and Brunch.",
+  price: 3,
+  neighborhood: "River North",
+})
+
+
 #la
 la_mexican = Restaurant.create({
   name: "Yxta Cocina Mexicana",

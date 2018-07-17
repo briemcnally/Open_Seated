@@ -19,7 +19,7 @@ class Profile extends React.Component {
           <h1>Reservations</h1>
           <div>
             <ul>
-              // <h2>{this.state.currentUser.reservations}</h2>
+              <h2>{this.state.currentUser.reservations}</h2>
             </ul>
           </div>
         </div>

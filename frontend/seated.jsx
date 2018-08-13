@@ -6,12 +6,14 @@ import { login, logout } from './actions/session_actions';
 import { fetchRestaurant, fetchRestaurants, createRestaurant }
         from './actions/restaurant_actions';
 import { createReservation, fetchReservations } from './actions/reservations_actions';
+import initializeAnalytics from './analytics';
 
 document.addEventListener('DOMContentLoaded', () => {
   let store;
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } };
     store = configureStore(preloadedState);
+    initializeAnalytics(store);
     delete window.currentUser;
   } else {
     store = configureStore();
